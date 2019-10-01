@@ -43,6 +43,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -57,96 +58,81 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BSlayer\BLDangNhap.cs" />
-    <Compile Include="BSlayer\BLHeDaoTao.cs" />
-    <Compile Include="BSlayer\BLKhoa.cs" />
-    <Compile Include="BSlayer\BLKhoaHoc.cs" />
     <Compile Include="BSlayer\BLLop.cs" />
     <Compile Include="BSlayer\BLMonHoc.cs" />
     <Compile Include="BSlayer\BLNhapDiem.cs" />
     <Compile Include="BSlayer\BLSinhVien.cs" />
     <Compile Include="DBlayer\DBMain.cs" />
-    <Compile Include="frmHeDaoTao.cs">
+    <Compile Include="frmChinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHeDaoTao.Designer.cs">
-      <DependentUpon>frmHeDaoTao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmKhoa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmKhoa.Designer.cs">
-      <DependentUpon>frmKhoa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmLop.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLop.Designer.cs">
-      <DependentUpon>frmLop.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDangNhap.Designer.cs">
-      <DependentUpon>frmDangNhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMonHoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMonHoc.Designer.cs">
-      <DependentUpon>frmMonHoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmNhapDiem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmNhapDiem.Designer.cs">
-      <DependentUpon>frmNhapDiem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmSinhVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSinhVien.Designer.cs">
-      <DependentUpon>frmSinhVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmKhoaHoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmKhoaHoc.Designer.cs">
-      <DependentUpon>frmKhoaHoc.cs</DependentUpon>
+    <Compile Include="frmChinh.Designer.cs">
+      <DependentUpon>frmChinh.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmHeDaoTao.resx">
-      <DependentUpon>frmHeDaoTao.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmKhoa.resx">
-      <DependentUpon>frmKhoa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmKhoaHoc.resx">
-      <DependentUpon>frmKhoaHoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLop.resx">
-      <DependentUpon>frmLop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDangNhap.resx">
-      <DependentUpon>frmDangNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMonHoc.resx">
-      <DependentUpon>frmMonHoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmNhapDiem.resx">
-      <DependentUpon>frmNhapDiem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSinhVien.resx">
-      <DependentUpon>frmSinhVien.cs</DependentUpon>
+    <Compile Include="ThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTin.Designer.cs">
+      <DependentUpon>ThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucChinh_DangKy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucChinh_DangKy.Designer.cs">
+      <DependentUpon>ucChinh_DangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucChinh_DangNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucChinh_DangNhap.Designer.cs">
+      <DependentUpon>ucChinh_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucGiaoVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucGiaoVien.Designer.cs">
+      <DependentUpon>ucGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucLop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucLop.Designer.cs">
+      <DependentUpon>ucLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMonHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMonHoc.Designer.cs">
+      <DependentUpon>ucMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNganh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNganh.Designer.cs">
+      <DependentUpon>ucNganh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhapDiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNhapDiem.Designer.cs">
+      <DependentUpon>ucNhapDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSinhVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSinhVien.Designer.cs">
+      <DependentUpon>ucSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucXemDiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucXemDiem.Designer.cs">
+      <DependentUpon>ucXemDiem.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmChinh.resx">
+      <DependentUpon>frmChinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -156,7 +142,38 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ThongTin.resx">
+      <DependentUpon>ThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucChinh_DangKy.resx">
+      <DependentUpon>ucChinh_DangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucChinh_DangNhap.resx">
+      <DependentUpon>ucChinh_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucGiaoVien.resx">
+      <DependentUpon>ucGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucLop.resx">
+      <DependentUpon>ucLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMonHoc.resx">
+      <DependentUpon>ucMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNganh.resx">
+      <DependentUpon>ucNganh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhapDiem.resx">
+      <DependentUpon>ucNhapDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSinhVien.resx">
+      <DependentUpon>ucSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucXemDiem.resx">
+      <DependentUpon>ucXemDiem.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -174,6 +191,11 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\chopp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\one-piece-5000x3000-go-to-new-world-hd-4k-2592.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
