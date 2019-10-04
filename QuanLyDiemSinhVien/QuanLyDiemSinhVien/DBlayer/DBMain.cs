@@ -75,5 +75,6 @@ namespace QuanLyDiemSinhVien.DBlayer
             return ds.Tables[0];
 
         }
+        
     }
 }

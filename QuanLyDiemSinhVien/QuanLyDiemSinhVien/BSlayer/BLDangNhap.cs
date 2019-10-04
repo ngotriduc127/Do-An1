@@ -20,19 +20,26 @@ namespace QuanLyDiemSinhVien.BSlayer
             db = new DBMain();
         }
         //Tạo tài khoản mới
-        public bool ThemUser(string UserName, string Password, ref string err)
+        public bool ThemUser(string UserName, string Password, string ChucVu, ref string err)
         {
-            string sqlString = "Insert Into tblUser(ID,Password,PhanQuyen) Values(" + "'" +
+            string sqlString = "Insert Into DangNhap(TenDangNhap,MatKhau,ChucVu) Values(" + "'" +
                 UserName + "','" +
-                Password + "','3')";
+                Password + "','"+ChucVu+"')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         //Lấy thông tin tài khoản đã có trong bảng SQL để đăng nhập
         public DataTable LayUser(string UserName, string Password, ref string err)
         {
-            string sqlString = "Select * from tblUser where ID='" + UserName + "' and Password = '" + Password
+            string sqlString = "Select * from DangNhap where TenDangNhap='" + UserName + "' and MatKhau = '" + Password
                 + "'";
             return db.GetDataTable(sqlString, CommandType.Text, ref err);
+        }
+        public DataTable LayQuyen(string UserName, string Password, ref string err)
+        {
+            string sqlString = "Select ChucVu from DangNhap where TenDangNhap='" + UserName + "' and MatKhau = '" + Password
+                + "'";
+            return db.GetDataTable(sqlString, CommandType.Text, ref err);
+            
         }
     }
 }

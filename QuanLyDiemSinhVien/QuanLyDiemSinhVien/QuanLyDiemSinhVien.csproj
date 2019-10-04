@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BSlayer\BLDangNhap.cs" />
+    <Compile Include="BSlayer\BLDoiMatKhau.cs" />
     <Compile Include="BSlayer\BLLop.cs" />
     <Compile Include="BSlayer\BLMonHoc.cs" />
     <Compile Include="BSlayer\BLNhapDiem.cs" />
@@ -88,6 +89,12 @@
     </Compile>
     <Compile Include="ucChinh_DangNhap.Designer.cs">
       <DependentUpon>ucChinh_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDoiMatKhau.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDoiMatKhau.Designer.cs">
+      <DependentUpon>ucDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="ucGiaoVien.cs">
       <SubType>UserControl</SubType>
@@ -125,6 +132,12 @@
     <Compile Include="ucSinhVien.Designer.cs">
       <DependentUpon>ucSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucTieuDe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTieuDe.Designer.cs">
+      <DependentUpon>ucTieuDe.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucXemDiem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -153,6 +166,9 @@
     <EmbeddedResource Include="ucChinh_DangNhap.resx">
       <DependentUpon>ucChinh_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucDoiMatKhau.resx">
+      <DependentUpon>ucDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucGiaoVien.resx">
       <DependentUpon>ucGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucSinhVien.resx">
       <DependentUpon>ucSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTieuDe.resx">
+      <DependentUpon>ucTieuDe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucXemDiem.resx">
       <DependentUpon>ucXemDiem.cs</DependentUpon>

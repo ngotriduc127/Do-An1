@@ -37,7 +37,7 @@
             this.txtTaiKhoanDK = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbChucVu = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnHuy
@@ -66,6 +66,7 @@
             this.btnDangKy.TabIndex = 18;
             this.btnDangKy.Text = "Đăng ký";
             this.btnDangKy.UseVisualStyleBackColor = true;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // txtReMatKhauDK
             // 
@@ -140,24 +141,25 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Chức vụ";
             // 
-            // comboBox1
+            // cbbChucVu
             // 
-            this.comboBox1.Font = new System.Drawing.Font(".VnCentury Schoolbook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbbChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbChucVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbChucVu.Items.AddRange(new object[] {
             "Sinh Viên",
-            "Giáo Viên"});
-            this.comboBox1.Location = new System.Drawing.Point(238, 219);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 21;
+            "Giáo Viên",
+            "Hiệu Trưởng"});
+            this.cbbChucVu.Location = new System.Drawing.Point(238, 219);
+            this.cbbChucVu.Name = "cbbChucVu";
+            this.cbbChucVu.Size = new System.Drawing.Size(121, 27);
+            this.cbbChucVu.TabIndex = 21;
             // 
             // ucChinh_DangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbbChucVu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnDangKy);
@@ -185,6 +187,6 @@
         private System.Windows.Forms.TextBox txtTaiKhoanDK;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbChucVu;
     }
 }

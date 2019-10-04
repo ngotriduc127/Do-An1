@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.linkLbDoiMatKhau = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lbDangKyTaiKhoan
@@ -59,6 +60,7 @@
             this.btnDangNhap.TabIndex = 17;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // txtMatKhau
             // 
@@ -97,12 +99,25 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Tài Khoản";
             // 
+            // linkLbDoiMatKhau
+            // 
+            this.linkLbDoiMatKhau.AutoSize = true;
+            this.linkLbDoiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLbDoiMatKhau.Location = new System.Drawing.Point(195, 363);
+            this.linkLbDoiMatKhau.Name = "linkLbDoiMatKhau";
+            this.linkLbDoiMatKhau.Size = new System.Drawing.Size(208, 20);
+            this.linkLbDoiMatKhau.TabIndex = 19;
+            this.linkLbDoiMatKhau.TabStop = true;
+            this.linkLbDoiMatKhau.Text = "Bạn muốn đổi mật khẩu?";
+            this.linkLbDoiMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLbDoiMatKhau_LinkClicked);
+            // 
             // ucChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.linkLbDoiMatKhau);
             this.Controls.Add(this.lbDangKyTaiKhoan);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtMatKhau);
@@ -124,5 +139,6 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel linkLbDoiMatKhau;
     }
 }

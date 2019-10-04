@@ -14,7 +14,6 @@ E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSi
 E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.frmChinh.resources
 E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucChinh.resources
 E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucChinh_DangKy.resources
-E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.csprojAssemblyReference.cache
 E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucNhapDiem.resources
 E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucGiaoVien.resources
 E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucLop.resources
@@ -23,3 +22,6 @@ E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSi
 E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucSinhVien.resources
 E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucXemDiem.resources
 E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ThongTin.resources
+E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucTieuDe.resources
+E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.csprojAssemblyReference.cache
+E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucDoiMatKhau.resources
