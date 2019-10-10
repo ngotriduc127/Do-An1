@@ -28,68 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnXem = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbbXemDiemTheo = new System.Windows.Forms.ComboBox();
             this.btnIn = new System.Windows.Forms.Button();
             this.btnTinhDiemTrungBinh = new System.Windows.Forms.Button();
             this.dgvXemDiemTheoMaSinhVien = new System.Windows.Forms.DataGridView();
-            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemL1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemLan2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemLan3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemLan4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemChuyenCan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemQuaTrinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemTrungBinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maSinhVienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maLopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemL1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemL2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemL3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemL4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemChuyenCanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemQuaTrinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemThiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemTrungBinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyDiemSinhVienDataSet4 = new QuanLyDiemSinhVien.QuanLyDiemSinhVienDataSet4();
+            this.quanLyDiemSinhVienDataSet3 = new QuanLyDiemSinhVien.QuanLyDiemSinhVienDataSet3();
+            this.diemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.diemTableAdapter = new QuanLyDiemSinhVien.QuanLyDiemSinhVienDataSet3TableAdapters.DiemTableAdapter();
+            this.diemTableAdapter1 = new QuanLyDiemSinhVien.QuanLyDiemSinhVienDataSet4TableAdapters.DiemTableAdapter();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXemDiemTheoMaSinhVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diemBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyDiemSinhVienDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyDiemSinhVienDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diemBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnXem
-            // 
-            this.btnXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXem.ImageIndex = 0;
-            this.btnXem.Location = new System.Drawing.Point(295, 29);
-            this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(62, 28);
-            this.btnXem.TabIndex = 23;
-            this.btnXem.Text = "Xem";
-            this.btnXem.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 33);
+            this.label1.Location = new System.Drawing.Point(21, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 20);
+            this.label1.Size = new System.Drawing.Size(240, 25);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Xem điểm theo";
-            // 
-            // cbbXemDiemTheo
-            // 
-            this.cbbXemDiemTheo.FormattingEnabled = true;
-            this.cbbXemDiemTheo.Items.AddRange(new object[] {
-            "Mã Sinh Viên",
-            "Lớp",
-            "Môn học"});
-            this.cbbXemDiemTheo.Location = new System.Drawing.Point(138, 35);
-            this.cbbXemDiemTheo.Name = "cbbXemDiemTheo";
-            this.cbbXemDiemTheo.Size = new System.Drawing.Size(151, 21);
-            this.cbbXemDiemTheo.TabIndex = 24;
+            this.label1.Text = "Tìm Kiếm Thông Tin =>";
             // 
             // btnIn
             // 
             this.btnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIn.ImageIndex = 0;
-            this.btnIn.Location = new System.Drawing.Point(422, 28);
+            this.btnIn.Location = new System.Drawing.Point(563, 34);
+            this.btnIn.Margin = new System.Windows.Forms.Padding(4);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(107, 28);
+            this.btnIn.Size = new System.Drawing.Size(143, 34);
             this.btnIn.TabIndex = 26;
             this.btnIn.Text = "In";
             this.btnIn.UseVisualStyleBackColor = true;
@@ -99,125 +87,210 @@
             this.btnTinhDiemTrungBinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTinhDiemTrungBinh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTinhDiemTrungBinh.ImageIndex = 0;
-            this.btnTinhDiemTrungBinh.Location = new System.Drawing.Point(90, 380);
+            this.btnTinhDiemTrungBinh.Location = new System.Drawing.Point(14, 462);
+            this.btnTinhDiemTrungBinh.Margin = new System.Windows.Forms.Padding(4);
             this.btnTinhDiemTrungBinh.Name = "btnTinhDiemTrungBinh";
-            this.btnTinhDiemTrungBinh.Size = new System.Drawing.Size(329, 28);
+            this.btnTinhDiemTrungBinh.Size = new System.Drawing.Size(463, 34);
             this.btnTinhDiemTrungBinh.TabIndex = 27;
-            this.btnTinhDiemTrungBinh.Text = "Tính điểm trung bình theo tín chỉ";
+            this.btnTinhDiemTrungBinh.Text = "Tính điểm trung bình theo tín chỉ của 1 môn";
             this.btnTinhDiemTrungBinh.UseVisualStyleBackColor = true;
+            this.btnTinhDiemTrungBinh.Click += new System.EventHandler(this.btnTinhDiemTrungBinh_Click);
             // 
             // dgvXemDiemTheoMaSinhVien
             // 
+            this.dgvXemDiemTheoMaSinhVien.AutoGenerateColumns = false;
             this.dgvXemDiemTheoMaSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvXemDiemTheoMaSinhVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.HoTen,
-            this.Lop,
-            this.MonHoc,
-            this.DiemL1,
-            this.DiemLan2,
-            this.DiemLan3,
-            this.DiemLan4,
-            this.DiemChuyenCan,
-            this.DiemQuaTrinh,
-            this.DiemThi,
-            this.DiemTrungBinh});
-            this.dgvXemDiemTheoMaSinhVien.Location = new System.Drawing.Point(3, 62);
+            this.maSinhVienDataGridViewTextBoxColumn,
+            this.maLopDataGridViewTextBoxColumn,
+            this.diemL1DataGridViewTextBoxColumn,
+            this.diemL2DataGridViewTextBoxColumn,
+            this.diemL3DataGridViewTextBoxColumn,
+            this.diemL4DataGridViewTextBoxColumn,
+            this.diemChuyenCanDataGridViewTextBoxColumn,
+            this.diemQuaTrinhDataGridViewTextBoxColumn,
+            this.diemThiDataGridViewTextBoxColumn,
+            this.diemTrungBinhDataGridViewTextBoxColumn});
+            this.dgvXemDiemTheoMaSinhVien.DataSource = this.diemBindingSource1;
+            this.dgvXemDiemTheoMaSinhVien.Location = new System.Drawing.Point(4, 70);
+            this.dgvXemDiemTheoMaSinhVien.Margin = new System.Windows.Forms.Padding(4);
             this.dgvXemDiemTheoMaSinhVien.Name = "dgvXemDiemTheoMaSinhVien";
-            this.dgvXemDiemTheoMaSinhVien.Size = new System.Drawing.Size(526, 312);
+            this.dgvXemDiemTheoMaSinhVien.RowHeadersWidth = 51;
+            this.dgvXemDiemTheoMaSinhVien.Size = new System.Drawing.Size(701, 384);
             this.dgvXemDiemTheoMaSinhVien.TabIndex = 28;
             // 
-            // HoTen
+            // maSinhVienDataGridViewTextBoxColumn
             // 
-            this.HoTen.HeaderText = "Họ Tên";
-            this.HoTen.Name = "HoTen";
+            this.maSinhVienDataGridViewTextBoxColumn.DataPropertyName = "MaSinhVien";
+            this.maSinhVienDataGridViewTextBoxColumn.HeaderText = "MaSinhVien";
+            this.maSinhVienDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maSinhVienDataGridViewTextBoxColumn.Name = "maSinhVienDataGridViewTextBoxColumn";
+            this.maSinhVienDataGridViewTextBoxColumn.Width = 125;
             // 
-            // Lop
+            // maLopDataGridViewTextBoxColumn
             // 
-            this.Lop.HeaderText = "Lớp Học";
-            this.Lop.Name = "Lop";
+            this.maLopDataGridViewTextBoxColumn.DataPropertyName = "MaLop";
+            this.maLopDataGridViewTextBoxColumn.HeaderText = "MaLop";
+            this.maLopDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maLopDataGridViewTextBoxColumn.Name = "maLopDataGridViewTextBoxColumn";
+            this.maLopDataGridViewTextBoxColumn.Width = 125;
             // 
-            // MonHoc
+            // diemL1DataGridViewTextBoxColumn
             // 
-            this.MonHoc.HeaderText = "Môn Học";
-            this.MonHoc.Name = "MonHoc";
+            this.diemL1DataGridViewTextBoxColumn.DataPropertyName = "DiemL1";
+            this.diemL1DataGridViewTextBoxColumn.HeaderText = "DiemL1";
+            this.diemL1DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.diemL1DataGridViewTextBoxColumn.Name = "diemL1DataGridViewTextBoxColumn";
+            this.diemL1DataGridViewTextBoxColumn.Width = 125;
             // 
-            // DiemL1
+            // diemL2DataGridViewTextBoxColumn
             // 
-            this.DiemL1.HeaderText = "Điểm Lần 1";
-            this.DiemL1.Name = "DiemL1";
+            this.diemL2DataGridViewTextBoxColumn.DataPropertyName = "DiemL2";
+            this.diemL2DataGridViewTextBoxColumn.HeaderText = "DiemL2";
+            this.diemL2DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.diemL2DataGridViewTextBoxColumn.Name = "diemL2DataGridViewTextBoxColumn";
+            this.diemL2DataGridViewTextBoxColumn.Width = 125;
             // 
-            // DiemLan2
+            // diemL3DataGridViewTextBoxColumn
             // 
-            this.DiemLan2.HeaderText = "Điểm Lần 2";
-            this.DiemLan2.Name = "DiemLan2";
+            this.diemL3DataGridViewTextBoxColumn.DataPropertyName = "DiemL3";
+            this.diemL3DataGridViewTextBoxColumn.HeaderText = "DiemL3";
+            this.diemL3DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.diemL3DataGridViewTextBoxColumn.Name = "diemL3DataGridViewTextBoxColumn";
+            this.diemL3DataGridViewTextBoxColumn.Width = 125;
             // 
-            // DiemLan3
+            // diemL4DataGridViewTextBoxColumn
             // 
-            this.DiemLan3.HeaderText = "Điểm Lần 3";
-            this.DiemLan3.Name = "DiemLan3";
+            this.diemL4DataGridViewTextBoxColumn.DataPropertyName = "DiemL4";
+            this.diemL4DataGridViewTextBoxColumn.HeaderText = "DiemL4";
+            this.diemL4DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.diemL4DataGridViewTextBoxColumn.Name = "diemL4DataGridViewTextBoxColumn";
+            this.diemL4DataGridViewTextBoxColumn.Width = 125;
             // 
-            // DiemLan4
+            // diemChuyenCanDataGridViewTextBoxColumn
             // 
-            this.DiemLan4.HeaderText = "Điểm Lần 4";
-            this.DiemLan4.Name = "DiemLan4";
+            this.diemChuyenCanDataGridViewTextBoxColumn.DataPropertyName = "DiemChuyenCan";
+            this.diemChuyenCanDataGridViewTextBoxColumn.HeaderText = "DiemChuyenCan";
+            this.diemChuyenCanDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.diemChuyenCanDataGridViewTextBoxColumn.Name = "diemChuyenCanDataGridViewTextBoxColumn";
+            this.diemChuyenCanDataGridViewTextBoxColumn.Width = 125;
             // 
-            // DiemChuyenCan
+            // diemQuaTrinhDataGridViewTextBoxColumn
             // 
-            this.DiemChuyenCan.HeaderText = "Điểm Chuyên Cần";
-            this.DiemChuyenCan.Name = "DiemChuyenCan";
+            this.diemQuaTrinhDataGridViewTextBoxColumn.DataPropertyName = "DiemQuaTrinh";
+            this.diemQuaTrinhDataGridViewTextBoxColumn.HeaderText = "DiemQuaTrinh";
+            this.diemQuaTrinhDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.diemQuaTrinhDataGridViewTextBoxColumn.Name = "diemQuaTrinhDataGridViewTextBoxColumn";
+            this.diemQuaTrinhDataGridViewTextBoxColumn.Width = 125;
             // 
-            // DiemQuaTrinh
+            // diemThiDataGridViewTextBoxColumn
             // 
-            this.DiemQuaTrinh.HeaderText = "Điểm Quá Trình";
-            this.DiemQuaTrinh.Name = "DiemQuaTrinh";
+            this.diemThiDataGridViewTextBoxColumn.DataPropertyName = "DiemThi";
+            this.diemThiDataGridViewTextBoxColumn.HeaderText = "DiemThi";
+            this.diemThiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.diemThiDataGridViewTextBoxColumn.Name = "diemThiDataGridViewTextBoxColumn";
+            this.diemThiDataGridViewTextBoxColumn.Width = 125;
             // 
-            // DiemThi
+            // diemTrungBinhDataGridViewTextBoxColumn
             // 
-            this.DiemThi.HeaderText = "Điểm Thi";
-            this.DiemThi.Name = "DiemThi";
+            this.diemTrungBinhDataGridViewTextBoxColumn.DataPropertyName = "DiemTrungBinh";
+            this.diemTrungBinhDataGridViewTextBoxColumn.HeaderText = "DiemTrungBinh";
+            this.diemTrungBinhDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.diemTrungBinhDataGridViewTextBoxColumn.Name = "diemTrungBinhDataGridViewTextBoxColumn";
+            this.diemTrungBinhDataGridViewTextBoxColumn.Width = 125;
             // 
-            // DiemTrungBinh
+            // diemBindingSource1
             // 
-            this.DiemTrungBinh.HeaderText = "Điểm Trung Bình";
-            this.DiemTrungBinh.Name = "DiemTrungBinh";
+            this.diemBindingSource1.DataMember = "Diem";
+            this.diemBindingSource1.DataSource = this.quanLyDiemSinhVienDataSet4;
+            // 
+            // quanLyDiemSinhVienDataSet4
+            // 
+            this.quanLyDiemSinhVienDataSet4.DataSetName = "QuanLyDiemSinhVienDataSet4";
+            this.quanLyDiemSinhVienDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // quanLyDiemSinhVienDataSet3
+            // 
+            this.quanLyDiemSinhVienDataSet3.DataSetName = "QuanLyDiemSinhVienDataSet3";
+            this.quanLyDiemSinhVienDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // diemBindingSource
+            // 
+            this.diemBindingSource.DataMember = "Diem";
+            this.diemBindingSource.DataSource = this.quanLyDiemSinhVienDataSet3;
+            // 
+            // diemTableAdapter
+            // 
+            this.diemTableAdapter.ClearBeforeFill = true;
+            // 
+            // diemTableAdapter1
+            // 
+            this.diemTableAdapter1.ClearBeforeFill = true;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(268, 34);
+            this.txtTimKiem.Multiline = true;
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(196, 29);
+            this.txtTimKiem.TabIndex = 29;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(495, 462);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(123, 34);
+            this.textBox1.TabIndex = 30;
             // 
             // ucXemDiem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SpringGreen;
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.dgvXemDiemTheoMaSinhVien);
             this.Controls.Add(this.btnTinhDiemTrungBinh);
             this.Controls.Add(this.btnIn);
-            this.Controls.Add(this.cbbXemDiemTheo);
-            this.Controls.Add(this.btnXem);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucXemDiem";
-            this.Size = new System.Drawing.Size(532, 420);
+            this.Size = new System.Drawing.Size(709, 517);
+            this.Load += new System.EventHandler(this.ucXemDiem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvXemDiemTheoMaSinhVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diemBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyDiemSinhVienDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyDiemSinhVienDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diemBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnXem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbbXemDiemTheo;
         private System.Windows.Forms.Button btnIn;
         private System.Windows.Forms.Button btnTinhDiemTrungBinh;
         private System.Windows.Forms.DataGridView dgvXemDiemTheoMaSinhVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MonHoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiemL1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiemLan2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiemLan3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiemLan4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiemChuyenCan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiemQuaTrinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiemThi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiemTrungBinh;
+        private System.Windows.Forms.BindingSource diemBindingSource;
+        private QuanLyDiemSinhVienDataSet3 quanLyDiemSinhVienDataSet3;
+        private QuanLyDiemSinhVienDataSet3TableAdapters.DiemTableAdapter diemTableAdapter;
+        private System.Windows.Forms.BindingSource diemBindingSource1;
+        private QuanLyDiemSinhVienDataSet4 quanLyDiemSinhVienDataSet4;
+        private QuanLyDiemSinhVienDataSet4TableAdapters.DiemTableAdapter diemTableAdapter1;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maSinhVienDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maLopDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diemL1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diemL2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diemL3DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diemL4DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diemChuyenCanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diemQuaTrinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diemThiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diemTrungBinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -13,7 +13,7 @@ namespace QuanLyDiemSinhVien.DBlayer
     class DBMain
     {
         //
-        string ConnStr = @"Data Source=DESKTOP-EQTRTVT\MSSQLSERVER2017;" + "Initial Catalog=QuanLyDiemSinhVien;" +
+        string ConnStr = @"Data Source=MSI;" + "Initial Catalog=QuanLyDiemSinhVien;" +
             "Integrated Security = True"; //THAY LẠI ĐƯỜNG DẪN
         SqlConnection conn = null;
         SqlCommand comm = null;
@@ -43,19 +43,19 @@ namespace QuanLyDiemSinhVien.DBlayer
             conn.Open();
             comm.CommandText = strSQL;
             comm.CommandType = ct;
-            try
-            {
-                comm.ExecuteNonQuery();
-                f = true;
-            }
-            catch (SqlException ex)
-            {
-                error = ex.Message;
-            }
-            finally
-            {
+            //try
+            //{
+            comm.ExecuteNonQuery();
+            f = true;
+            //}
+            //catch (SqlException ex)
+            //{
+            //    error = ex.Message;
+            //}
+            //finally
+            //{
                 conn.Close();
-            }
+            //}
             return f;
         }
         //Hàm lấy thông tin từ bảng
