@@ -24,7 +24,7 @@ namespace QuanLyDiemSinhVien.BSlayer
         {
             string sqlString = "Insert Into MonHoc Values(" + "'" +
                 MaMon + "',N'" +
-                TenMon+ "',N"+
+                TenMon+ "',N'"+
                 STC+ "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
@@ -33,5 +33,8 @@ namespace QuanLyDiemSinhVien.BSlayer
             string sqlString = "Delete From MonHoc where MaMon ='" + MaMon + "' ";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
+
+
+       
     }
 }

@@ -42,12 +42,21 @@ namespace QuanLyDiemSinhVien
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            gv.Them(dgvGiaoVien.CurrentRow.Cells[0].Value.ToString(),
-                dgvGiaoVien.CurrentRow.Cells[1].Value.ToString(),
-                dgvGiaoVien.CurrentRow.Cells[2].Value.ToString(),
-                dgvGiaoVien.CurrentRow.Cells[3].Value.ToString(),
-                ref err);
-            Load_Data(); 
+          
+            try
+            {
+                gv.Them(dgvGiaoVien.CurrentRow.Cells[0].Value.ToString(),
+              dgvGiaoVien.CurrentRow.Cells[1].Value.ToString(),
+              dgvGiaoVien.CurrentRow.Cells[2].Value.ToString(),
+              dgvGiaoVien.CurrentRow.Cells[3].Value.ToString(),
+              ref err);
+                Load_Data();
+                MessageBox.Show("thêm Thành công :))");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("lỗi cmnr :((");
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

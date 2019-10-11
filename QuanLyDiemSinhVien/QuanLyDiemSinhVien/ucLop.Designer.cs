@@ -30,19 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.dgvDiem = new System.Windows.Forms.DataGridView();
-            this.quanLyDiemSinhVienDataSet5 = new QuanLyDiemSinhVien.QuanLyDiemSinhVienDataSet5();
-            this.lopBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lopTableAdapter = new QuanLyDiemSinhVien.QuanLyDiemSinhVienDataSet5TableAdapters.LopTableAdapter();
             this.maLopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maMonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phongHocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maGiaoVienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lopBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyDiemSinhVienDataSet5 = new QuanLyDiemSinhVien.QuanLyDiemSinhVienDataSet5();
+            this.lopTableAdapter = new QuanLyDiemSinhVien.QuanLyDiemSinhVienDataSet5TableAdapters.LopTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyDiemSinhVienDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyDiemSinhVienDataSet5)).BeginInit();
             this.SuspendLayout();
             // 
             // btnXoa
@@ -50,26 +49,14 @@
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.ImageIndex = 0;
-            this.btnXoa.Location = new System.Drawing.Point(592, 443);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoa.Location = new System.Drawing.Point(109, 443);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(80, 36);
             this.btnXoa.TabIndex = 41;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnCapNhat
-            // 
-            this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapNhat.ImageIndex = 0;
-            this.btnCapNhat.Location = new System.Drawing.Point(288, 443);
-            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(125, 36);
-            this.btnCapNhat.TabIndex = 40;
-            this.btnCapNhat.Text = "Cập Nhật";
-            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -77,7 +64,7 @@
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.ImageIndex = 0;
             this.btnThem.Location = new System.Drawing.Point(4, 443);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(84, 36);
             this.btnThem.TabIndex = 39;
@@ -96,25 +83,11 @@
             this.maGiaoVienDataGridViewTextBoxColumn});
             this.dgvDiem.DataSource = this.lopBindingSource;
             this.dgvDiem.Location = new System.Drawing.Point(4, 39);
-            this.dgvDiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDiem.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDiem.Name = "dgvDiem";
             this.dgvDiem.RowHeadersWidth = 51;
             this.dgvDiem.Size = new System.Drawing.Size(701, 396);
             this.dgvDiem.TabIndex = 38;
-            // 
-            // quanLyDiemSinhVienDataSet5
-            // 
-            this.quanLyDiemSinhVienDataSet5.DataSetName = "QuanLyDiemSinhVienDataSet5";
-            this.quanLyDiemSinhVienDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lopBindingSource
-            // 
-            this.lopBindingSource.DataMember = "Lop";
-            this.lopBindingSource.DataSource = this.quanLyDiemSinhVienDataSet5;
-            // 
-            // lopTableAdapter
-            // 
-            this.lopTableAdapter.ClearBeforeFill = true;
             // 
             // maLopDataGridViewTextBoxColumn
             // 
@@ -148,22 +121,35 @@
             this.maGiaoVienDataGridViewTextBoxColumn.Name = "maGiaoVienDataGridViewTextBoxColumn";
             this.maGiaoVienDataGridViewTextBoxColumn.Width = 125;
             // 
+            // lopBindingSource
+            // 
+            this.lopBindingSource.DataMember = "Lop";
+            this.lopBindingSource.DataSource = this.quanLyDiemSinhVienDataSet5;
+            // 
+            // quanLyDiemSinhVienDataSet5
+            // 
+            this.quanLyDiemSinhVienDataSet5.DataSetName = "QuanLyDiemSinhVienDataSet5";
+            this.quanLyDiemSinhVienDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lopTableAdapter
+            // 
+            this.lopTableAdapter.ClearBeforeFill = true;
+            // 
             // ucLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SpringGreen;
             this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvDiem);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucLop";
             this.Size = new System.Drawing.Size(709, 517);
             this.Load += new System.EventHandler(this.ucLop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyDiemSinhVienDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyDiemSinhVienDataSet5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -171,7 +157,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dgvDiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn maLopDataGridViewTextBoxColumn;

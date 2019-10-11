@@ -44,12 +44,46 @@ namespace QuanLyDiemSinhVien
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            lop.Them(dgvDiem.CurrentRow.Cells[0].Value.ToString(),
+            
+            try
+            {
+                lop.Them(dgvDiem.CurrentRow.Cells[0].Value.ToString(),
                 dgvDiem.CurrentRow.Cells[1].Value.ToString(),
                 dgvDiem.CurrentRow.Cells[2].Value.ToString(),
                 dgvDiem.CurrentRow.Cells[3].Value.ToString(),
                 ref err);
-            Load_Data();
+                Load_Data();
+                MessageBox.Show("thêm Thành công :))");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("lỗi rồi :((");
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult traloi;
+                traloi = MessageBox.Show("Bạn có chắc muốn xóa nhân viên này không?", "Trả lời",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (traloi == DialogResult.Yes)
+                {
+
+                    lop.XoaSV(dgvDiem.CurrentRow.Cells[0].Value.ToString(), ref err);
+                    Load_Data();
+                    MessageBox.Show("Đã xóa xong!");
+                }
+                else
+                {
+                    MessageBox.Show("Không thực hiện việc xóa!");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Không xóa được. Lỗi rồi!");
+            }
         }
     }
 }

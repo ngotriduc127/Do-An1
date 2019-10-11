@@ -45,23 +45,46 @@ namespace QuanLyDiemSinhVien
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string tc = dgvMonHoc.CurrentRow.Cells[2].Value.ToString();
-            int stc = int.Parse(tc);
-            //try
-            //{
+           
+            try
+            {
 
-                BLMonHoc mh = new BLMonHoc();
-                mh.Them(dgvMonHoc.CurrentRow.Cells[0].Value.ToString(),
+            BLMonHoc mh = new BLMonHoc();
+            int stc = Convert.ToInt32(dgvMonHoc.CurrentRow.Cells[2].Value.ToString());
+            mh.Them(dgvMonHoc.CurrentRow.Cells[0].Value.ToString(),
                     dgvMonHoc.CurrentRow.Cells[1].Value.ToString(),
-                  stc,
+                stc,
                     ref err);
                 Load_Data();
                 MessageBox.Show("thêm Thành công :))");
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("lỗi cmnr :((");
-            //}
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("lỗi cmnr :((");
+            }
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+
+            DialogResult traloi;
+            traloi = MessageBox.Show("Bạn có chắc muốn xóa nhân viên này không?", "Trả lời",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (traloi == DialogResult.Yes)
+            {
+                mh.Xoa(dgvMonHoc.CurrentRow.Cells[0].Value.ToString(), ref err);
+                // Cập nhật lại DataGridView
+                Load_Data();
+                MessageBox.Show("Đã xóa xong!");
+            }
+            else
+            {
+                MessageBox.Show("Không thực hiện việc xóa!");
+            }
+        }
+
+    
+        
     }
 }
