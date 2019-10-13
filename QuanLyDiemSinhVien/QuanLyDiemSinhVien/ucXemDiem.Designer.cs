@@ -62,10 +62,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(16, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 25);
+            this.label1.Size = new System.Drawing.Size(190, 20);
             this.label1.TabIndex = 20;
             this.label1.Text = "Tìm Kiếm Thông Tin =>";
             // 
@@ -74,10 +73,9 @@
             this.btnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIn.ImageIndex = 0;
-            this.btnIn.Location = new System.Drawing.Point(563, 34);
-            this.btnIn.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIn.Location = new System.Drawing.Point(422, 28);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(143, 34);
+            this.btnIn.Size = new System.Drawing.Size(107, 28);
             this.btnIn.TabIndex = 26;
             this.btnIn.Text = "In";
             this.btnIn.UseVisualStyleBackColor = true;
@@ -87,10 +85,9 @@
             this.btnTinhDiemTrungBinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTinhDiemTrungBinh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTinhDiemTrungBinh.ImageIndex = 0;
-            this.btnTinhDiemTrungBinh.Location = new System.Drawing.Point(14, 462);
-            this.btnTinhDiemTrungBinh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTinhDiemTrungBinh.Location = new System.Drawing.Point(10, 375);
             this.btnTinhDiemTrungBinh.Name = "btnTinhDiemTrungBinh";
-            this.btnTinhDiemTrungBinh.Size = new System.Drawing.Size(463, 34);
+            this.btnTinhDiemTrungBinh.Size = new System.Drawing.Size(347, 28);
             this.btnTinhDiemTrungBinh.TabIndex = 27;
             this.btnTinhDiemTrungBinh.Text = "Tính điểm trung bình theo tín chỉ của 1 môn";
             this.btnTinhDiemTrungBinh.UseVisualStyleBackColor = true;
@@ -112,11 +109,10 @@
             this.diemThiDataGridViewTextBoxColumn,
             this.diemTrungBinhDataGridViewTextBoxColumn});
             this.dgvXemDiemTheoMaSinhVien.DataSource = this.diemBindingSource1;
-            this.dgvXemDiemTheoMaSinhVien.Location = new System.Drawing.Point(4, 70);
-            this.dgvXemDiemTheoMaSinhVien.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvXemDiemTheoMaSinhVien.Location = new System.Drawing.Point(3, 57);
             this.dgvXemDiemTheoMaSinhVien.Name = "dgvXemDiemTheoMaSinhVien";
             this.dgvXemDiemTheoMaSinhVien.RowHeadersWidth = 51;
-            this.dgvXemDiemTheoMaSinhVien.Size = new System.Drawing.Size(701, 384);
+            this.dgvXemDiemTheoMaSinhVien.Size = new System.Drawing.Size(526, 312);
             this.dgvXemDiemTheoMaSinhVien.TabIndex = 28;
             // 
             // maSinhVienDataGridViewTextBoxColumn
@@ -229,24 +225,26 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(268, 34);
+            this.txtTimKiem.Location = new System.Drawing.Point(201, 28);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(196, 29);
+            this.txtTimKiem.Size = new System.Drawing.Size(148, 24);
             this.txtTimKiem.TabIndex = 29;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(495, 462);
+            this.textBox1.Location = new System.Drawing.Point(371, 375);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 34);
+            this.textBox1.Size = new System.Drawing.Size(93, 28);
             this.textBox1.TabIndex = 30;
             // 
             // ucXemDiem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SpringGreen;
             this.Controls.Add(this.textBox1);
@@ -255,9 +253,8 @@
             this.Controls.Add(this.btnTinhDiemTrungBinh);
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucXemDiem";
-            this.Size = new System.Drawing.Size(709, 517);
+            this.Size = new System.Drawing.Size(1154, 740);
             this.Load += new System.EventHandler(this.ucXemDiem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvXemDiemTheoMaSinhVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diemBindingSource1)).EndInit();

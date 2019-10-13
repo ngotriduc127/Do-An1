@@ -36,7 +36,7 @@
             this.lbTieuDe.AutoSize = true;
             this.lbTieuDe.BackColor = System.Drawing.Color.Transparent;
             this.lbTieuDe.Font = new System.Drawing.Font("Sitka Display", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTieuDe.Location = new System.Drawing.Point(8, 141);
+            this.lbTieuDe.Location = new System.Drawing.Point(291, 212);
             this.lbTieuDe.Name = "lbTieuDe";
             this.lbTieuDe.Size = new System.Drawing.Size(517, 138);
             this.lbTieuDe.TabIndex = 1;
@@ -50,7 +50,7 @@
             this.BackColor = System.Drawing.Color.SpringGreen;
             this.Controls.Add(this.lbTieuDe);
             this.Name = "ucTieuDe";
-            this.Size = new System.Drawing.Size(532, 420);
+            this.Size = new System.Drawing.Size(1154, 740);
             this.ResumeLayout(false);
             this.PerformLayout();
 

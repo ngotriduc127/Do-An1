@@ -77,6 +77,7 @@ namespace QuanLyDiemSinhVien
                     if (a=="Hi?u Tru?ng")   // Lỗi phông chữ
                     {
                         frmChinh.trangthaidangnhap = 4;
+                        
                     }
                 }
                 else

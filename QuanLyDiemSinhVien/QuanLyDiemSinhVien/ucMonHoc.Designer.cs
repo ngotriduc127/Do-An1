@@ -53,10 +53,9 @@
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.ImageIndex = 0;
-            this.btnXoa.Location = new System.Drawing.Point(160, 443);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Location = new System.Drawing.Point(120, 360);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(74, 55);
+            this.btnXoa.Size = new System.Drawing.Size(56, 45);
             this.btnXoa.TabIndex = 41;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -67,10 +66,9 @@
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.ImageIndex = 0;
-            this.btnThem.Location = new System.Drawing.Point(4, 443);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Location = new System.Drawing.Point(3, 360);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(114, 55);
+            this.btnThem.Size = new System.Drawing.Size(86, 45);
             this.btnThem.TabIndex = 39;
             this.btnThem.Text = "Lưu";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -85,11 +83,10 @@
             this.tenMonDataGridViewTextBoxColumn,
             this.soTinhChiDataGridViewTextBoxColumn});
             this.dgvMonHoc.DataSource = this.monHocBindingSource1;
-            this.dgvMonHoc.Location = new System.Drawing.Point(4, 39);
-            this.dgvMonHoc.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvMonHoc.Location = new System.Drawing.Point(3, 32);
             this.dgvMonHoc.Name = "dgvMonHoc";
             this.dgvMonHoc.RowHeadersWidth = 51;
-            this.dgvMonHoc.Size = new System.Drawing.Size(701, 396);
+            this.dgvMonHoc.Size = new System.Drawing.Size(526, 322);
             this.dgvMonHoc.TabIndex = 38;
             // 
             // maMonDataGridViewTextBoxColumn
@@ -146,15 +143,14 @@
             // 
             // ucMonHoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SpringGreen;
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvMonHoc);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucMonHoc";
-            this.Size = new System.Drawing.Size(709, 517);
+            this.Size = new System.Drawing.Size(1154, 740);
             this.Load += new System.EventHandler(this.ucMonHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.monHocBindingSource1)).EndInit();

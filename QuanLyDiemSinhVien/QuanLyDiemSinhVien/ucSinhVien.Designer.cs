@@ -54,10 +54,9 @@
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.ImageIndex = 0;
-            this.btnXoa.Location = new System.Drawing.Point(559, 457);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Location = new System.Drawing.Point(419, 371);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(80, 36);
+            this.btnXoa.Size = new System.Drawing.Size(60, 29);
             this.btnXoa.TabIndex = 41;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -68,10 +67,9 @@
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCapNhat.ImageIndex = 0;
-            this.btnCapNhat.Location = new System.Drawing.Point(287, 457);
-            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCapNhat.Location = new System.Drawing.Point(215, 371);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(125, 36);
+            this.btnCapNhat.Size = new System.Drawing.Size(94, 29);
             this.btnCapNhat.TabIndex = 40;
             this.btnCapNhat.Text = "Cập Nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
@@ -82,10 +80,9 @@
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.ImageIndex = 0;
-            this.btnThem.Location = new System.Drawing.Point(55, 457);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Location = new System.Drawing.Point(41, 371);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(84, 36);
+            this.btnThem.Size = new System.Drawing.Size(63, 29);
             this.btnThem.TabIndex = 39;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -103,11 +100,10 @@
             this.queQuanDataGridViewTextBoxColumn,
             this.maNganhDataGridViewTextBoxColumn});
             this.dgvSinhVien.DataSource = this.sinhVienBindingSource;
-            this.dgvSinhVien.Location = new System.Drawing.Point(4, 58);
-            this.dgvSinhVien.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvSinhVien.Location = new System.Drawing.Point(3, 47);
             this.dgvSinhVien.Name = "dgvSinhVien";
             this.dgvSinhVien.RowHeadersWidth = 51;
-            this.dgvSinhVien.Size = new System.Drawing.Size(701, 375);
+            this.dgvSinhVien.Size = new System.Drawing.Size(526, 305);
             this.dgvSinhVien.TabIndex = 42;
             // 
             // maSinhVienDataGridViewTextBoxColumn
@@ -179,7 +175,7 @@
             // 
             // ucSinhVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SpringGreen;
             this.Controls.Add(this.dgvSinhVien);
@@ -187,9 +183,8 @@
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucSinhVien";
-            this.Size = new System.Drawing.Size(709, 517);
+            this.Size = new System.Drawing.Size(1154, 740);
             this.Load += new System.EventHandler(this.ucSinhVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sinhVienBindingSource)).EndInit();

@@ -49,10 +49,9 @@
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.ImageIndex = 0;
-            this.btnXoa.Location = new System.Drawing.Point(96, 464);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Location = new System.Drawing.Point(72, 377);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(80, 36);
+            this.btnXoa.Size = new System.Drawing.Size(60, 29);
             this.btnXoa.TabIndex = 37;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -63,10 +62,9 @@
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.ImageIndex = 0;
-            this.btnThem.Location = new System.Drawing.Point(4, 464);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Location = new System.Drawing.Point(3, 377);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(84, 36);
+            this.btnThem.Size = new System.Drawing.Size(63, 29);
             this.btnThem.TabIndex = 35;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -82,11 +80,10 @@
             this.sDTDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn});
             this.dgvGiaoVien.DataSource = this.giaoVienBindingSource;
-            this.dgvGiaoVien.Location = new System.Drawing.Point(4, 60);
-            this.dgvGiaoVien.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvGiaoVien.Location = new System.Drawing.Point(3, 49);
             this.dgvGiaoVien.Name = "dgvGiaoVien";
             this.dgvGiaoVien.RowHeadersWidth = 51;
-            this.dgvGiaoVien.Size = new System.Drawing.Size(701, 396);
+            this.dgvGiaoVien.Size = new System.Drawing.Size(526, 322);
             this.dgvGiaoVien.TabIndex = 34;
             // 
             // maGiaoVienDataGridViewTextBoxColumn
@@ -137,15 +134,14 @@
             // 
             // ucGiaoVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SpringGreen;
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvGiaoVien);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucGiaoVien";
-            this.Size = new System.Drawing.Size(709, 517);
+            this.Size = new System.Drawing.Size(1154, 740);
             this.Load += new System.EventHandler(this.ucGiaoVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoVienBindingSource)).EndInit();

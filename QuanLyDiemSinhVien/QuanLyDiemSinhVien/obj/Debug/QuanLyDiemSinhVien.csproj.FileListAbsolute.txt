@@ -23,7 +23,6 @@ E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSi
 E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucXemDiem.resources
 E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ThongTin.resources
 E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucTieuDe.resources
-E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.csprojAssemblyReference.cache
 E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucDoiMatKhau.resources
 D:\HK1(3)\DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\bin\Debug\QuanLyDiemSinhVien.exe.config
 D:\HK1(3)\DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\bin\Debug\QuanLyDiemSinhVien.exe
@@ -51,3 +50,4 @@ D:\HK1(3)\DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVi
 D:\HK1(3)\DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.csproj.CopyComplete
 D:\HK1(3)\DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.exe
 D:\HK1(3)\DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.pdb
+E:\Nam3-HK1\DO_AN_1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.csprojAssemblyReference.cache

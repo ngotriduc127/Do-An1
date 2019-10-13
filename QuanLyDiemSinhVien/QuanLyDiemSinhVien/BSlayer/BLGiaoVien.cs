@@ -10,6 +10,7 @@ namespace QuanLyDiemSinhVien.BSlayer
     class BLGiaoVien
     {
         DBMain db = new DBMain();
+        
 
         public  BLGiaoVien()
         {

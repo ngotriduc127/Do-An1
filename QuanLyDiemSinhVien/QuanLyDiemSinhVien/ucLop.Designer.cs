@@ -49,10 +49,9 @@
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.ImageIndex = 0;
-            this.btnXoa.Location = new System.Drawing.Point(109, 443);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Location = new System.Drawing.Point(511, 559);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(80, 36);
+            this.btnXoa.Size = new System.Drawing.Size(338, 144);
             this.btnXoa.TabIndex = 41;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -63,10 +62,9 @@
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.ImageIndex = 0;
-            this.btnThem.Location = new System.Drawing.Point(4, 443);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Location = new System.Drawing.Point(155, 559);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(84, 36);
+            this.btnThem.Size = new System.Drawing.Size(341, 144);
             this.btnThem.TabIndex = 39;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -82,11 +80,10 @@
             this.phongHocDataGridViewTextBoxColumn,
             this.maGiaoVienDataGridViewTextBoxColumn});
             this.dgvDiem.DataSource = this.lopBindingSource;
-            this.dgvDiem.Location = new System.Drawing.Point(4, 39);
-            this.dgvDiem.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDiem.Location = new System.Drawing.Point(109, 116);
             this.dgvDiem.Name = "dgvDiem";
             this.dgvDiem.RowHeadersWidth = 51;
-            this.dgvDiem.Size = new System.Drawing.Size(701, 396);
+            this.dgvDiem.Size = new System.Drawing.Size(804, 437);
             this.dgvDiem.TabIndex = 38;
             // 
             // maLopDataGridViewTextBoxColumn
@@ -137,15 +134,14 @@
             // 
             // ucLop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SpringGreen;
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvDiem);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucLop";
-            this.Size = new System.Drawing.Size(709, 517);
+            this.Size = new System.Drawing.Size(1154, 740);
             this.Load += new System.EventHandler(this.ucLop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).EndInit();

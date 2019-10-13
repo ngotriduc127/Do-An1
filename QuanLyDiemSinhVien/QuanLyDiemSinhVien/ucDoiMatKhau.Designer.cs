@@ -32,16 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucDoiMatKhau));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnHuyBo = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label3 = new System.Windows.Forms.Label();
+            this.btnCapNhat = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtXacNhanMatKhau = new System.Windows.Forms.TextBox();
             this.txtMatKhauMoi = new System.Windows.Forms.TextBox();
             this.txtMatKhauCu = new System.Windows.Forms.TextBox();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
-            this.btnHuyBo = new System.Windows.Forms.Button();
-            this.btnCapNhat = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,7 +60,7 @@
             this.groupBox1.Controls.Add(this.txtMatKhauCu);
             this.groupBox1.Controls.Add(this.txtTaiKhoan);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(31, 144);
+            this.groupBox1.Location = new System.Drawing.Point(300, 214);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(470, 246);
             this.groupBox1.TabIndex = 11;
@@ -75,6 +75,21 @@
             this.label4.Size = new System.Drawing.Size(162, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Xác minh mật khẩu";
+            // 
+            // btnHuyBo
+            // 
+            this.btnHuyBo.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnHuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHuyBo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuyBo.ImageKey = "(none)";
+            this.btnHuyBo.ImageList = this.imageList1;
+            this.btnHuyBo.Location = new System.Drawing.Point(327, 177);
+            this.btnHuyBo.Name = "btnHuyBo";
+            this.btnHuyBo.Size = new System.Drawing.Size(124, 61);
+            this.btnHuyBo.TabIndex = 5;
+            this.btnHuyBo.Text = "Hủy bỏ";
+            this.btnHuyBo.UseVisualStyleBackColor = false;
+            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
             // 
             // imageList1
             // 
@@ -91,6 +106,21 @@
             this.label3.Size = new System.Drawing.Size(116, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Mật khẩu mới";
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCapNhat.ImageKey = "(none)";
+            this.btnCapNhat.ImageList = this.imageList1;
+            this.btnCapNhat.Location = new System.Drawing.Point(175, 177);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(145, 61);
+            this.btnCapNhat.TabIndex = 4;
+            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.UseVisualStyleBackColor = false;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // label2
             // 
@@ -142,40 +172,10 @@
             this.txtTaiKhoan.Size = new System.Drawing.Size(275, 26);
             this.txtTaiKhoan.TabIndex = 1;
             // 
-            // btnHuyBo
-            // 
-            this.btnHuyBo.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnHuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHuyBo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHuyBo.ImageKey = "(none)";
-            this.btnHuyBo.ImageList = this.imageList1;
-            this.btnHuyBo.Location = new System.Drawing.Point(327, 177);
-            this.btnHuyBo.Name = "btnHuyBo";
-            this.btnHuyBo.Size = new System.Drawing.Size(124, 61);
-            this.btnHuyBo.TabIndex = 5;
-            this.btnHuyBo.Text = "Hủy bỏ";
-            this.btnHuyBo.UseVisualStyleBackColor = false;
-            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
-            // 
-            // btnCapNhat
-            // 
-            this.btnCapNhat.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapNhat.ImageKey = "(none)";
-            this.btnCapNhat.ImageList = this.imageList1;
-            this.btnCapNhat.Location = new System.Drawing.Point(175, 177);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(145, 61);
-            this.btnCapNhat.TabIndex = 4;
-            this.btnCapNhat.Text = "Cập nhật";
-            this.btnCapNhat.UseVisualStyleBackColor = false;
-            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(31, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(300, 100);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(470, 108);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -190,7 +190,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "ucDoiMatKhau";
-            this.Size = new System.Drawing.Size(532, 420);
+            this.Size = new System.Drawing.Size(1154, 740);
             this.Load += new System.EventHandler(this.ucDoiMatKhau_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
