@@ -35,10 +35,11 @@
             // 
             this.lbTieuDe.AutoSize = true;
             this.lbTieuDe.BackColor = System.Drawing.Color.Transparent;
-            this.lbTieuDe.Font = new System.Drawing.Font("Sitka Display", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTieuDe.Font = new System.Drawing.Font("Sitka Display", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTieuDe.ForeColor = System.Drawing.Color.Crimson;
             this.lbTieuDe.Location = new System.Drawing.Point(291, 212);
             this.lbTieuDe.Name = "lbTieuDe";
-            this.lbTieuDe.Size = new System.Drawing.Size(517, 138);
+            this.lbTieuDe.Size = new System.Drawing.Size(689, 184);
             this.lbTieuDe.TabIndex = 1;
             this.lbTieuDe.Text = "Chương Trình \r\nQuản Lý Điểm Sinh Viên";
             this.lbTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -48,6 +49,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SpringGreen;
+            this.BackgroundImage = global::QuanLyDiemSinhVien.Properties.Resources.truong3D;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.lbTieuDe);
             this.Name = "ucTieuDe";
             this.Size = new System.Drawing.Size(1154, 740);

@@ -63,9 +63,9 @@ namespace QuanLyDiemSinhVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap chopp {
+        internal static System.Drawing.Bitmap chopp___Copy {
             get {
-                object obj = ResourceManager.GetObject("chopp", resourceCulture);
+                object obj = ResourceManager.GetObject("chopp - Copy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,89 @@ namespace QuanLyDiemSinhVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap one_piece_5000x3000_go_to_new_world_hd_4k_2592 {
+        internal static System.Drawing.Bitmap dangky {
             get {
-                object obj = ResourceManager.GetObject("one-piece-5000x3000-go-to-new-world-hd-4k-2592", resourceCulture);
+                object obj = ResourceManager.GetObject("dangky", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dangnhap {
+            get {
+                object obj = ResourceManager.GetObject("dangnhap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconin2 {
+            get {
+                object obj = ResourceManager.GetObject("iconin2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconLuu {
+            get {
+                object obj = ResourceManager.GetObject("iconLuu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconrankkk2 {
+            get {
+                object obj = ResourceManager.GetObject("iconrankkk2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconReset2 {
+            get {
+                object obj = ResourceManager.GetObject("iconReset2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icontruonghoc {
+            get {
+                object obj = ResourceManager.GetObject("icontruonghoc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap khungvien {
+            get {
+                object obj = ResourceManager.GetObject("khungvien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap truong3D {
+            get {
+                object obj = ResourceManager.GetObject("truong3D", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

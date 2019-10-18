@@ -53,20 +53,72 @@ namespace QuanLyDiemSinhVien
                 MessageBox.Show("Vui lòng nhập mật khẩu!");
                 return;
             }
-            if (cbbChucVu.Text=="")
-            {
-                MessageBox.Show("Vui lòng chọn chức vụ!");
-            }
+            //if (cbbChucVu.Text=="")
+            //{
+            //    MessageBox.Show("Vui lòng chọn chức vụ!");
+            //}
+            //else
+            //    if (txtMatKhauDK.Text != txtReMatKhauDK.Text)
+            //    MessageBox.Show("Hai mật khẩu không khớp!");
+            if (txtMatKhauDK.Text != txtReMatKhauDK.Text)
+            MessageBox.Show("Hai mật khẩu không khớp!");
             else
-                if (txtMatKhauDK.Text != txtReMatKhauDK.Text)
-                MessageBox.Show("Hai mật khẩu không khớp!");
-            else
             {
-                //Thêm dữ liệu vào bảng User trên SQL
-                BLDangNhap blDN = new BLDangNhap();
-                blDN.ThemUser(this.txtTaiKhoanDK.Text, this.txtMatKhauDK.Text,this.cbbChucVu.Text, ref err);
-                MessageBox.Show("Bạn đã đăng kí thành công!");
+
+                DataTable dtHT = blDN.LayMaHieuTruongDeDangKy(txtTaiKhoanDK.Text.ToString().TrimEnd(), ref err);
+                DataTable dtGV = blDN.LayMaGiaoVienDeDangKy(txtTaiKhoanDK.Text.ToString().TrimEnd(), ref err);
+                DataTable dtSV = blDN.LayMaSinhVienDeDangKy(txtTaiKhoanDK.Text.ToString().TrimEnd(), ref err);
+                if (dtSV.Rows.Count==0 && dtGV.Rows.Count == 0 && dtHT.Rows.Count == 0)
+                {
+                    MessageBox.Show("Hãy dùng mã số để đăng ký!");
+                }
+                else
+                {
+                    BLDangNhap blDangKy = new BLDangNhap();
+                    DataTable a = blDangKy.LayUserDeDK(txtTaiKhoanDK.Text, ref err);
+
+                    if (a.Rows.Count > 0) //tên tài khoản này đã tồn tại
+                    {
+                        MessageBox.Show("Tên tài khoản đã được dùng!");
+                    }
+                    else
+
+                    {
+                        //Thêm dữ liệu vào bảng User trên SQL
+                        BLDangNhap blDN = new BLDangNhap();
+                        blDN.ThemUser(this.txtTaiKhoanDK.Text, this.txtMatKhauDK.Text, this.cbbChucVu.Text, ref err);
+                        MessageBox.Show("Bạn đã đăng kí thành công!");
+                    }
+                }
+                
+
+
             }
+        }
+
+        private void txtTaiKhoanDK_TextChanged(object sender, EventArgs e)
+        {
+            DataTable dtHT = blDN.LayMaHieuTruongDeDangKy(txtTaiKhoanDK.Text.ToString().TrimEnd(), ref err);
+            DataTable dtGV = blDN.LayMaGiaoVienDeDangKy(txtTaiKhoanDK.Text.ToString().TrimEnd(), ref err);
+            DataTable dtSV = blDN.LayMaSinhVienDeDangKy(txtTaiKhoanDK.Text.ToString().TrimEnd(), ref err);
+            if (dtSV.Rows.Count == 0 && dtGV.Rows.Count == 0 && dtHT.Rows.Count==0)
+            {
+                cbbChucVu.Text = "--------";
+            }
+            else if (dtGV.Rows.Count>0)
+            {
+                cbbChucVu.Text = "Giáo Viên";
+
+            }
+            else if (dtSV.Rows.Count>0)
+            {
+                cbbChucVu.Text = "Sinh Viên";
+            }
+            else if (dtHT.Rows.Count>0)
+            {
+                cbbChucVu.Text = "Hiệu Trưởng";
+            }
+
         }
     }
 }

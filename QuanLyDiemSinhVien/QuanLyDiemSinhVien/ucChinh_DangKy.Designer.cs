@@ -42,116 +42,134 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.BackColor = System.Drawing.Color.Transparent;
+            this.btnHuy.BackgroundImage = global::QuanLyDiemSinhVien.Properties.Resources.chopp___Copy;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.Red;
             this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHuy.ImageKey = "1460546211_DeleteRed.ico";
-            this.btnHuy.Location = new System.Drawing.Point(559, 351);
+            this.btnHuy.Location = new System.Drawing.Point(480, 427);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(105, 46);
+            this.btnHuy.Size = new System.Drawing.Size(168, 57);
             this.btnHuy.TabIndex = 19;
             this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnDangKy
             // 
-            this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKy.BackColor = System.Drawing.Color.Transparent;
+            this.btnDangKy.BackgroundImage = global::QuanLyDiemSinhVien.Properties.Resources.chopp___Copy;
+            this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKy.ForeColor = System.Drawing.Color.Red;
+            this.btnDangKy.Image = global::QuanLyDiemSinhVien.Properties.Resources.chopp___Copy;
             this.btnDangKy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangKy.ImageIndex = 0;
-            this.btnDangKy.Location = new System.Drawing.Point(381, 351);
+            this.btnDangKy.Location = new System.Drawing.Point(268, 427);
             this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(97, 46);
+            this.btnDangKy.Size = new System.Drawing.Size(172, 57);
             this.btnDangKy.TabIndex = 18;
             this.btnDangKy.Text = "Đăng ký";
-            this.btnDangKy.UseVisualStyleBackColor = true;
+            this.btnDangKy.UseVisualStyleBackColor = false;
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // txtReMatKhauDK
             // 
-            this.txtReMatKhauDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReMatKhauDK.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtReMatKhauDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReMatKhauDK.ForeColor = System.Drawing.Color.Black;
-            this.txtReMatKhauDK.Location = new System.Drawing.Point(484, 248);
+            this.txtReMatKhauDK.Location = new System.Drawing.Point(427, 277);
             this.txtReMatKhauDK.Name = "txtReMatKhauDK";
             this.txtReMatKhauDK.PasswordChar = '*';
-            this.txtReMatKhauDK.Size = new System.Drawing.Size(123, 26);
+            this.txtReMatKhauDK.Size = new System.Drawing.Size(180, 44);
             this.txtReMatKhauDK.TabIndex = 16;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(393, 248);
+            this.label5.Location = new System.Drawing.Point(192, 260);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 20);
+            this.label5.Size = new System.Drawing.Size(163, 42);
             this.label5.TabIndex = 12;
             this.label5.Text = "Nhập lại";
             // 
             // txtMatKhauDK
             // 
-            this.txtMatKhauDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhauDK.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtMatKhauDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhauDK.ForeColor = System.Drawing.Color.Black;
-            this.txtMatKhauDK.Location = new System.Drawing.Point(484, 197);
+            this.txtMatKhauDK.Location = new System.Drawing.Point(427, 195);
             this.txtMatKhauDK.Name = "txtMatKhauDK";
             this.txtMatKhauDK.PasswordChar = '*';
-            this.txtMatKhauDK.Size = new System.Drawing.Size(123, 26);
+            this.txtMatKhauDK.Size = new System.Drawing.Size(180, 44);
             this.txtMatKhauDK.TabIndex = 17;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(393, 197);
+            this.label3.Location = new System.Drawing.Point(192, 197);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 20);
+            this.label3.Size = new System.Drawing.Size(186, 42);
             this.label3.TabIndex = 13;
             this.label3.Text = "Mật Khẩu";
             // 
             // txtTaiKhoanDK
             // 
-            this.txtTaiKhoanDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaiKhoanDK.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtTaiKhoanDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTaiKhoanDK.ForeColor = System.Drawing.Color.Black;
-            this.txtTaiKhoanDK.Location = new System.Drawing.Point(484, 149);
+            this.txtTaiKhoanDK.Location = new System.Drawing.Point(427, 123);
             this.txtTaiKhoanDK.Name = "txtTaiKhoanDK";
-            this.txtTaiKhoanDK.Size = new System.Drawing.Size(123, 26);
+            this.txtTaiKhoanDK.Size = new System.Drawing.Size(180, 44);
             this.txtTaiKhoanDK.TabIndex = 14;
+            this.txtTaiKhoanDK.TextChanged += new System.EventHandler(this.txtTaiKhoanDK_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(389, 149);
+            this.label4.Location = new System.Drawing.Point(192, 123);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 20);
+            this.label4.Size = new System.Drawing.Size(198, 42);
             this.label4.TabIndex = 15;
             this.label4.Text = "Tài Khoản";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(393, 298);
+            this.label1.Location = new System.Drawing.Point(192, 344);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 20);
+            this.label1.Size = new System.Drawing.Size(163, 42);
             this.label1.TabIndex = 20;
             this.label1.Text = "Chức vụ";
             // 
             // cbbChucVu
             // 
+            this.cbbChucVu.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.cbbChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbChucVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbChucVu.Enabled = false;
+            this.cbbChucVu.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbChucVu.Items.AddRange(new object[] {
             "Sinh Viên",
             "Giáo Viên",
-            "Hiệu Trưởng"});
-            this.cbbChucVu.Location = new System.Drawing.Point(484, 296);
+            "Hiệu Trưởng",
+            "Chức Vụ",
+            "--------"});
+            this.cbbChucVu.Location = new System.Drawing.Point(427, 344);
             this.cbbChucVu.Name = "cbbChucVu";
-            this.cbbChucVu.Size = new System.Drawing.Size(121, 27);
+            this.cbbChucVu.Size = new System.Drawing.Size(180, 44);
             this.cbbChucVu.TabIndex = 21;
             // 
             // ucChinh_DangKy
@@ -159,6 +177,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.BackgroundImage = global::QuanLyDiemSinhVien.Properties.Resources.dangky;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.cbbChucVu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnHuy);

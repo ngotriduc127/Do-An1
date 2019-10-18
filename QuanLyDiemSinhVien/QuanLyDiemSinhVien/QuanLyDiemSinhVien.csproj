@@ -79,6 +79,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyDiemSinhVienDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -201,14 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="ThongTin.resx">
       <DependentUpon>ThongTin.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,10 +362,54 @@
     <None Include="QuanLyDiemSinhVienDataSet8.xss">
       <DependentUpon>QuanLyDiemSinhVienDataSet8.xsd</DependentUpon>
     </None>
-    <None Include="Resources\chopp.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\one-piece-5000x3000-go-to-new-world-hd-4k-2592.jpg" />
+    <None Include="Resources\truong3D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icontruonghoc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anhvien.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconin2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconrankkk2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconReset2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconin21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconLuu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khungvien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chopp - Copy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chopp - Copy1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconLuu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconin22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chopp - Copy2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dangnhap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dangky.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

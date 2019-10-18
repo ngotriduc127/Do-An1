@@ -16,26 +16,14 @@ namespace QuanLyDiemSinhVien
         public static int hanchequyen;
         public static string chucvu;
         public static string lopcuagiaovien;
+        public static int thaydoinoidungbtndangnhapchinh = 0;
         
         public frmChinh()
         {
             trangthaidangnhap = 0;
             InitializeComponent();
         }
-        private void btnDangNhap_Click(object sender, EventArgs e)
-        {
-            btnDangNhap.BackColor = Color.Yellow;
-            btnNhapDiem.BackColor = Color.SkyBlue;
-            btnXemDiem.BackColor = Color.SkyBlue;
-            btnThoat.BackColor = Color.SkyBlue;
-            btnThongTin.BackColor = Color.SkyBlue;
-            
-            ucChinh1.BringToFront();
-                
-
-
-        }
-
+        
         //internal void BringToFront(ucChinh_DangKy ucChinh_DangKy)
         //{
         //    throw new NotImplementedException();
@@ -48,7 +36,7 @@ namespace QuanLyDiemSinhVien
             {
                 if (trangthaidangnhap >=3)//giáo viên và hiệu trưởng
                 {
-                    btnDangNhap.BackColor = Color.SkyBlue;
+                    btnDangNhapChinh.BackColor = Color.SkyBlue;
                     btnNhapDiem.BackColor = Color.Yellow;
                     btnXemDiem.BackColor = Color.SkyBlue;
                     btnThoat.BackColor = Color.SkyBlue;
@@ -74,7 +62,7 @@ namespace QuanLyDiemSinhVien
         {
             if (trangthaidangnhap >0)
             {
-                btnDangNhap.BackColor = Color.SkyBlue;
+                btnDangNhapChinh.BackColor = Color.SkyBlue;
                 btnNhapDiem.BackColor = Color.SkyBlue;
                 btnXemDiem.BackColor = Color.Yellow;
                 btnThoat.BackColor = Color.SkyBlue;
@@ -92,7 +80,7 @@ namespace QuanLyDiemSinhVien
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            btnDangNhap.BackColor = Color.SkyBlue;
+            btnDangNhapChinh.BackColor = Color.SkyBlue;
             btnNhapDiem.BackColor = Color.SkyBlue;
             btnXemDiem.BackColor = Color.SkyBlue;
             btnThoat.BackColor = Color.Yellow;
@@ -114,7 +102,7 @@ namespace QuanLyDiemSinhVien
                 if (trangthaidangnhap == 4)
                 {
 
-                    btnDangNhap.BackColor = Color.SkyBlue;
+                    btnDangNhapChinh.BackColor = Color.SkyBlue;
                     btnNhapDiem.BackColor = Color.SkyBlue;
                     btnXemDiem.BackColor = Color.SkyBlue;
                     btnThoat.BackColor = Color.SkyBlue;
@@ -153,6 +141,78 @@ namespace QuanLyDiemSinhVien
         private void ucNhapDiem1_Load(object sender, EventArgs e)
         {
             
+
+        }
+
+        private void btnDangNhapChinh_Click(object sender, EventArgs e)
+        {
+
+            btnDangNhapChinh.BackColor = Color.Yellow;
+            btnNhapDiem.BackColor = Color.SkyBlue;
+            btnXemDiem.BackColor = Color.SkyBlue;
+            btnThoat.BackColor = Color.SkyBlue;
+            btnThongTin.BackColor = Color.SkyBlue;
+            if (btnDangNhapChinh.Text=="ĐĂNG NHẬP")
+            {
+                ucChinh1.BringToFront();
+            }
+            else //btnDangNhapChinh.Text=="ĐĂNG XUẤT"
+            {
+                DialogResult dialog = MessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialog == DialogResult.Yes)
+                {
+                    trangthaidangnhap = 0;
+                    MessageBox.Show("Bạn đã đăng xuất!");
+                    ucTieuDe1.BringToFront();
+                    btnDangNhapChinh.BackColor = Color.SkyBlue;
+                    btnDangNhapChinh.Text = "ĐĂNG NHẬP";
+                    thaydoinoidungbtndangnhapchinh = 0;
+                    timerDangNhapDangXuat.Enabled = true;
+                }
+                else if (dialog == DialogResult.No)
+                {
+                    //
+                }
+                
+            }
+
+
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(thaydoinoidungbtndangnhapchinh==1)
+            {
+                btnDangNhapChinh.Text = "ĐĂNG XUẤT";
+                timerDangNhapDangXuat.Enabled = false;
+            }
+        }
+
+        private void timerChucVuDangNhap_Tick(object sender, EventArgs e)
+        {
+            if(trangthaidangnhap==2)    //Sinh Viên
+            {
+                btnXemDiem.Visible = true;
+            }
+
+            else if (trangthaidangnhap == 3)  //Giáo Viên
+            {
+                btnXemDiem.Visible = true;
+                btnNhapDiem.Visible = true;
+            }
+            else if (trangthaidangnhap==4)  //Hiệu Trưởng
+            {
+                btnThongTin.Visible = true;
+
+            }
+             else if (trangthaidangnhap==0)
+            {
+                btnXemDiem.Visible = false;
+                btnNhapDiem.Visible = false;
+                btnThongTin.Visible = false;
+            }
+
 
         }
     }

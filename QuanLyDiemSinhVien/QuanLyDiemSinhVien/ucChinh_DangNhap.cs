@@ -56,10 +56,19 @@ namespace QuanLyDiemSinhVien
                     string a = CHUCVU.Rows[0][0].ToString().TrimEnd();//Lấy chức vụ
                     BLDangNhap.username = txtTenDangNhap.Text;
                     BLDangNhap.password = txtMatKhau.Text;
-                   
                     
-                    MessageBox.Show("Xin chào " + txtTenDangNhap.Text + "! Bạn đã đăng nhập thành công!", "Thông báo");
+                    
+                    MessageBox.Show("Bạn đã đăng nhập thành công!", "Thông báo");
+                    frmChinh.thaydoinoidungbtndangnhapchinh = 1;
+                    //frmChinh.btnDangNhapChinh.Text = "ĐĂNG XUẤT";
+                    
+                   
                     this.SendToBack();
+                    ucTieuDe uc = new ucTieuDe();
+                    uc.BringToFront();
+                    
+                    
+                    //frmChinh.thaydoinoidungbtndangnhapchinh = 1;
                     txtMatKhau.ResetText();
                     txtTenDangNhap.ResetText();
                     
@@ -79,6 +88,7 @@ namespace QuanLyDiemSinhVien
                         frmChinh.trangthaidangnhap = 4;
                         
                     }
+
                 }
                 else
                 {
@@ -101,6 +111,7 @@ namespace QuanLyDiemSinhVien
             this.Controls.Clear();
             ucDoiMatKhau.Dock = DockStyle.Fill;
             this.Controls.Add(ucDoiMatKhau);
+            
         }
     }
 }

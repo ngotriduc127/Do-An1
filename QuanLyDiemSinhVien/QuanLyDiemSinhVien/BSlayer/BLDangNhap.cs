@@ -41,5 +41,32 @@ namespace QuanLyDiemSinhVien.BSlayer
             return db.GetDataTable(sqlString, CommandType.Text, ref err);
             
         }
+        public DataTable LayUserDeDK(string UserName,ref string err)
+        {
+            string sqlString = "Select TenDangNhap from DangNhap where TenDangNhap='" + UserName + "'";
+            return db.GetDataTable(sqlString, CommandType.Text, ref err);
+
+        }
+        public DataTable LayMaSinhVienDeDangKy (string username, ref string err)
+        {
+            string sqlString = "Select MaSinhVien from SinhVien where MaSinhVien='" + username + "'";
+            return db.GetDataTable(sqlString, CommandType.Text, ref err);
+        }
+        public DataTable LayMaGiaoVienDeDangKy(string username, ref string err)
+        {
+            string sqlString = "Select MaGiaoVien from GiaoVien where MaGiaoVien='" + username + "'";
+            return db.GetDataTable(sqlString, CommandType.Text, ref err);
+        }
+        public DataTable LayMaHieuTruongDeDangKy(string username, ref string err)
+        {
+            string sqlString = "Select MaHieuTruong from HieuTruong where MaHieuTruong='" + username + "'";
+            return db.GetDataTable(sqlString, CommandType.Text, ref err);
+        }
+        //public DataTable LayChucVuDeDangKy(string username, ref string err)
+        //{
+        //    //string sqlString = "Select MaGiaoVien from GiaoVien where MaGiaoVien='" + username + "'";
+
+        //    return db.GetDataTable(sqlString, CommandType.Text, ref err);
+        //}
     }
 }
