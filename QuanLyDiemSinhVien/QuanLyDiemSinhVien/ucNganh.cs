@@ -13,7 +13,7 @@ using QuanLyDiemSinhVien.DBlayer;
 
 namespace QuanLyDiemSinhVien
 {
-    public partial class ucNganh : UserControl 
+    public partial class ucNganh : UserControl
     {
         DBMain db = null;
         string err;
@@ -31,7 +31,7 @@ namespace QuanLyDiemSinhVien
             {
                 dtNganh = new DataTable();
                 DataSet ds = nganh.LayNganh();
-                dtNganh= ds.Tables[0];
+                dtNganh = ds.Tables[0];
                 dgvNganh.DataSource = dtNganh;
 
             }
@@ -89,12 +89,12 @@ namespace QuanLyDiemSinhVien
         {
             Nganh nganhh = new Nganh();
             BLSinhVien SinhVien = new BLSinhVien();
-           
+
             nganhh.CapNhat(dgvNganh.CurrentRow.Cells[1].Value.ToString(), dgvNganh.CurrentRow.Cells[0].Value.ToString(), textBox1.Text.ToString(), ref err);
             SinhVien.CapNhatSV2(dgvNganh.CurrentRow.Cells[0].Value.ToString(), ref err);
             Load_Data();
             SinhVien.LaySV();
-            
+
         }
 
         private void dgvNganh_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -102,5 +102,7 @@ namespace QuanLyDiemSinhVien
             int r = dgvNganh.CurrentCell.RowIndex;
             textBox1.Text = dgvNganh.Rows[r].Cells[0].Value.ToString();
         }
+
+
     }
 }

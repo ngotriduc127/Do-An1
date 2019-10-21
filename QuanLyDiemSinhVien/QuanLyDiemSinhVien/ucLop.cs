@@ -30,9 +30,9 @@ namespace QuanLyDiemSinhVien
                 dtLop = new DataTable();
                 DataSet ds = lop.LayTT();
                 dtLop = ds.Tables[0];
-                dgvDiem.DataSource = dtLop;
+                dgvLop.DataSource = dtLop;
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("Khong lay duoc thong tin tu bang Lop :(");
             }
@@ -42,15 +42,21 @@ namespace QuanLyDiemSinhVien
             Load_Data();
         }
 
+        private void dgvLop_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int r = dgvLop.CurrentCell.RowIndex;
+            textBox1.Text = dgvLop.Rows[r].Cells[0].Value.ToString();
+        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
-            
             try
             {
-                lop.Them(dgvDiem.CurrentRow.Cells[0].Value.ToString(),
-                dgvDiem.CurrentRow.Cells[1].Value.ToString(),
-                dgvDiem.CurrentRow.Cells[2].Value.ToString(),
-                dgvDiem.CurrentRow.Cells[3].Value.ToString(),
+                BLXemDiem diem = new BLXemDiem();
+                lop.Them(dgvLop.CurrentRow.Cells[0].Value.ToString(),
+                dgvLop.CurrentRow.Cells[1].Value.ToString(),
+                dgvLop.CurrentRow.Cells[2].Value.ToString(),
+                dgvLop.CurrentRow.Cells[3].Value.ToString(),
                 ref err);
                 Load_Data();
                 MessageBox.Show("thêm Thành công :))");
@@ -63,17 +69,20 @@ namespace QuanLyDiemSinhVien
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            try
+           try
             {
+                BLXemDiem xd = new BLXemDiem();
                 DialogResult traloi;
                 traloi = MessageBox.Show("Bạn có chắc muốn xóa nhân viên này không?", "Trả lời",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (traloi == DialogResult.Yes)
                 {
-
-                    lop.XoaSV(dgvDiem.CurrentRow.Cells[0].Value.ToString(), ref err);
+                    lop.XoaML(dgvLop.CurrentRow.Cells[0].Value.ToString(), ref err);
+                    xd.XoaMaLOP(dgvLop.CurrentRow.Cells[1].Value.ToString(),ref err);
                     Load_Data();
                     MessageBox.Show("Đã xóa xong!");
+                    xd.LayTT();
+                   
                 }
                 else
                 {
@@ -82,7 +91,27 @@ namespace QuanLyDiemSinhVien
             }
             catch (Exception)
             {
-                MessageBox.Show("Không xóa được. Lỗi rồi!");
+               MessageBox.Show("Không xóa được. Lỗi rồi!");
+            }
+       }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                BLLop lop = new BLLop();               
+                lop.CapNhatMaLop(dgvLop.CurrentRow.Cells[1].Value.ToString(),
+                    dgvLop.CurrentRow.Cells[2].Value.ToString(),
+                    dgvLop.CurrentRow.Cells[3].Value.ToString(),
+                    dgvLop.CurrentRow.Cells[0].Value.ToString(),
+                    textBox1.Text,
+                    ref err);
+                Load_Data();
+                MessageBox.Show("Cập nhật thành công ");
+            }catch(Exception)
+            {
+                MessageBox.Show("Không cập nhật được");
             }
         }
     }

@@ -47,9 +47,10 @@ namespace QuanLyDiemSinhVien
         }
 
         private void btnThem_Click(object sender, EventArgs e)
-        {           
+        {
             try
             {
+                BLXemDiem diem = new BLXemDiem();
                 int GioiTinh = 0;
                 if (dgvSinhVien.CurrentRow.Cells[3].Value == gioiTinhDataGridViewCheckBoxColumn)
                     GioiTinh = 0; //Nam
@@ -67,8 +68,9 @@ namespace QuanLyDiemSinhVien
                     dgvSinhVien.CurrentRow.Cells[4].Value.ToString(),
                    dgvSinhVien.CurrentRow.Cells[5].Value.ToString(),
                     ref err); ;
-
+                diem.ThemSV1(dgvSinhVien.CurrentRow.Cells[0].Value.ToString(), ref err);
                 Load_Data();
+                diem.LayTT();
                 MessageBox.Show("Đã thêm xong!");
             }
             catch (SqlException)
@@ -88,7 +90,7 @@ namespace QuanLyDiemSinhVien
                 if (traloi == DialogResult.Yes)
                 {
 
-                    sv.XoaSV(dgvSinhVien.CurrentRow.Cells[0].Value.ToString(),ref err);
+                    sv.XoaSV(dgvSinhVien.CurrentRow.Cells[0].Value.ToString(), ref err);
                     Load_Data();
                     MessageBox.Show("Đã xóa xong!");
                 }
@@ -105,38 +107,48 @@ namespace QuanLyDiemSinhVien
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
+                BLSinhVien blSV = new BLSinhVien();
+                BLXemDiem diem = new BLXemDiem();
                 int GioiTinh = 0;
                 if (dgvSinhVien.CurrentRow.Cells[3].Value == gioiTinhDataGridViewCheckBoxColumn)
                     GioiTinh = 0; //Nam
                 else
                     GioiTinh = 1; //Nữ          
 
-                //DateTime dt = Convert.ToDateTime(dgvSinhVien.CurrentRow.Cells[2].Value);
-                //dt.ToShortDateString();
+                DateTime dt = Convert.ToDateTime(dgvSinhVien.CurrentRow.Cells[2].Value);
+                dt.ToShortDateString();
 
-                // MessageBox.Show(dt.Date.ToString());
-                BLSinhVien blNV = new BLSinhVien();
-                blNV.CapNhatSV(dgvSinhVien.CurrentRow.Cells[0].Value.ToString(),
-                    dgvSinhVien.CurrentRow.Cells[1].Value.ToString(),
-                 Convert.ToDateTime(dgvSinhVien.CurrentRow.Cells[2].Value.ToString()), GioiTinh,
-                    dgvSinhVien.CurrentRow.Cells[4].Value.ToString(),
-                   dgvSinhVien.CurrentRow.Cells[5].Value.ToString(),
-                    ref err); ;
+                MessageBox.Show(dt.Date.ToString());
 
+                blSV.CapNhatSV(dgvSinhVien.CurrentRow.Cells[1].Value.ToString(),
+                                Convert.ToDateTime(dgvSinhVien.CurrentRow.Cells[2].Value.ToString()),
+                                GioiTinh,
+                                dgvSinhVien.CurrentRow.Cells[4].Value.ToString(),
+                                dgvSinhVien.CurrentRow.Cells[5].Value.ToString(),
+                                dgvSinhVien.CurrentRow.Cells[0].Value.ToString(),
+                                textBox1.Text.ToString(),
+                                ref err);
+                diem.CapNhatMaSV(dgvSinhVien.CurrentRow.Cells[0].Value.ToString(), ref err);
                 Load_Data();
+                diem.LayTT();
                 MessageBox.Show("Đã sửa xong!");
-            //}
-            //catch (SqlException)
-            //{
-            //    MessageBox.Show("Không sửa được. Lỗi rồi!");
-            //}
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Không sửa được. Lỗi rồi!");
+            }
         }
-    } 
+        private void dgvSinhVien_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int r = dgvSinhVien.CurrentCell.RowIndex;
+            textBox1.Text = dgvSinhVien.Rows[r].Cells[0].Value.ToString();
+        }
+    }
 }
 
-  
 
-   
+
+
 

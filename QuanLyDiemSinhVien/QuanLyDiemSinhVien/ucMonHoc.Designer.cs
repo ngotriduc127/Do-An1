@@ -41,6 +41,8 @@
             this.quanLyDiemSinhVienDataSet7 = new QuanLyDiemSinhVien.QuanLyDiemSinhVienDataSet7();
             this.monHocTableAdapter = new QuanLyDiemSinhVien.QuanLyDiemSinhVienDataSet7TableAdapters.MonHocTableAdapter();
             this.monHocTableAdapter1 = new QuanLyDiemSinhVien.QuanLyDiemSinhVienDataSet8TableAdapters.MonHocTableAdapter();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnCapNhat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monHocBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyDiemSinhVienDataSet8)).BeginInit();
@@ -53,10 +55,11 @@
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.ImageIndex = 0;
-            this.btnXoa.Location = new System.Drawing.Point(120, 360);
+            this.btnXoa.Location = new System.Drawing.Point(605, 444);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(56, 45);
-            this.btnXoa.TabIndex = 41;
+            this.btnXoa.Size = new System.Drawing.Size(74, 55);
+            this.btnXoa.TabIndex = 46;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -66,13 +69,14 @@
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.ImageIndex = 0;
-            this.btnThem.Location = new System.Drawing.Point(3, 360);
+            this.btnThem.Location = new System.Drawing.Point(4, 444);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(86, 45);
-            this.btnThem.TabIndex = 39;
-            this.btnThem.Text = "Lưu";
+            this.btnThem.Size = new System.Drawing.Size(114, 55);
+            this.btnThem.TabIndex = 45;
+            this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
             // dgvMonHoc
             // 
@@ -83,11 +87,13 @@
             this.tenMonDataGridViewTextBoxColumn,
             this.soTinhChiDataGridViewTextBoxColumn});
             this.dgvMonHoc.DataSource = this.monHocBindingSource1;
-            this.dgvMonHoc.Location = new System.Drawing.Point(3, 32);
+            this.dgvMonHoc.Location = new System.Drawing.Point(4, 40);
+            this.dgvMonHoc.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMonHoc.Name = "dgvMonHoc";
             this.dgvMonHoc.RowHeadersWidth = 51;
-            this.dgvMonHoc.Size = new System.Drawing.Size(526, 322);
-            this.dgvMonHoc.TabIndex = 38;
+            this.dgvMonHoc.Size = new System.Drawing.Size(701, 396);
+            this.dgvMonHoc.TabIndex = 44;
+            this.dgvMonHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMonHoc_CellClick);
             // 
             // maMonDataGridViewTextBoxColumn
             // 
@@ -141,16 +147,35 @@
             // 
             this.monHocTableAdapter1.ClearBeforeFill = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(568, 11);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(111, 22);
+            this.textBox1.TabIndex = 48;
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.Location = new System.Drawing.Point(267, 444);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(96, 55);
+            this.btnCapNhat.TabIndex = 47;
+            this.btnCapNhat.Text = "Cập Nhật";
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click_1);
+            // 
             // ucMonHoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SpringGreen;
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvMonHoc);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnCapNhat);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucMonHoc";
-            this.Size = new System.Drawing.Size(1154, 740);
+            this.Size = new System.Drawing.Size(1539, 911);
             this.Load += new System.EventHandler(this.ucMonHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.monHocBindingSource1)).EndInit();
@@ -158,6 +183,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.monHocBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyDiemSinhVienDataSet7)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -169,11 +195,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn maMonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenMonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn soTinhChiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource monHocBindingSource1;
+        private QuanLyDiemSinhVienDataSet8 quanLyDiemSinhVienDataSet8;
         private System.Windows.Forms.BindingSource monHocBindingSource;
         private QuanLyDiemSinhVienDataSet7 quanLyDiemSinhVienDataSet7;
         private QuanLyDiemSinhVienDataSet7TableAdapters.MonHocTableAdapter monHocTableAdapter;
-        private System.Windows.Forms.BindingSource monHocBindingSource1;
-        private QuanLyDiemSinhVienDataSet8 quanLyDiemSinhVienDataSet8;
         private QuanLyDiemSinhVienDataSet8TableAdapters.MonHocTableAdapter monHocTableAdapter1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnCapNhat;
     }
 }

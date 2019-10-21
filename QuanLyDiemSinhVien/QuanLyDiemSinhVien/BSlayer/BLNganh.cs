@@ -32,19 +32,12 @@ namespace QuanLyDiemSinhVien.BSlayer
             string sqlString = "Delete From Nganh where MaNganh ='" + MaNganh + "' ";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
-       
-        public bool CapNhatNganh(string MaNganh, string TenNganh, ref string err)
-        {
-            
-            string sqlString = @"Update Nganh Set TenNganh = N'" +
-               TenNganh + "' Where MaSinhVien='" + MaNganh + "' ";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-        }
 
-        
+
+
         public bool CapNhat(string TenNganh, string MaNganhM, string MaCu, ref string err)
         {
-          
+
             string sqlString = @"Update Nganh Set TenNganh = N'" +
                 TenNganh + "'," + "MaNganh=N'" + MaNganhM + "' Where MaNganh=N'" + MaCu + "' ";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);

@@ -94,6 +94,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyDiemSinhVienDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyDiemSinhVienDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyDiemSinhVienDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyDiemSinhVienDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyDiemSinhVienDataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyDiemSinhVienDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -128,6 +138,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyDiemSinhVienDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyDiemSinhVienDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyDiemSinhVienDataSet9.xsd</DependentUpon>
     </Compile>
     <Compile Include="ThongTin.cs">
       <SubType>Form</SubType>
@@ -285,6 +300,28 @@
     <None Include="QuanLyDiemSinhVienDataSet1.xss">
       <DependentUpon>QuanLyDiemSinhVienDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="QuanLyDiemSinhVienDataSet10.xsc">
+      <DependentUpon>QuanLyDiemSinhVienDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyDiemSinhVienDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyDiemSinhVienDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyDiemSinhVienDataSet10.xss">
+      <DependentUpon>QuanLyDiemSinhVienDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyDiemSinhVienDataSet11.xsc">
+      <DependentUpon>QuanLyDiemSinhVienDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyDiemSinhVienDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyDiemSinhVienDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyDiemSinhVienDataSet11.xss">
+      <DependentUpon>QuanLyDiemSinhVienDataSet11.xsd</DependentUpon>
+    </None>
     <None Include="QuanLyDiemSinhVienDataSet2.xsc">
       <DependentUpon>QuanLyDiemSinhVienDataSet2.xsd</DependentUpon>
     </None>
@@ -364,6 +401,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="QuanLyDiemSinhVienDataSet9.xsc">
+      <DependentUpon>QuanLyDiemSinhVienDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyDiemSinhVienDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyDiemSinhVienDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyDiemSinhVienDataSet9.xss">
+      <DependentUpon>QuanLyDiemSinhVienDataSet9.xsd</DependentUpon>
+    </None>
     <None Include="Resources\truong3D.jpg" />
   </ItemGroup>
   <ItemGroup>

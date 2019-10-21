@@ -20,12 +20,12 @@ namespace QuanLyDiemSinhVien.BSlayer
             return db.ExecuteQueryDataSet("select *from MonHoc", CommandType.Text);
         }
 
-        public bool Them(string MaMon, string TenMon,int STC, ref string err)
+        public bool Them(string MaMon, string TenMon, int STC, ref string err)
         {
             string sqlString = "Insert Into MonHoc Values(" + "'" +
                 MaMon + "',N'" +
-                TenMon+ "',N'"+
-                STC+ "')";
+                TenMon + "',N'" +
+                STC + "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         public bool Xoa(string MaMon, ref string err)
@@ -34,7 +34,13 @@ namespace QuanLyDiemSinhVien.BSlayer
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
 
+        public bool CapNhatMH(string TenMon, int SoTinhChi, string MaMonM, string MaCu, ref string err)
+        {
 
-       
+            string sqlString = @"Update MonHoc Set TenMon = N'" +
+                TenMon + "',SoTinhChi='" + SoTinhChi + "'," + "MaMon=N'" + MaMonM + "' Where MaMon=N'" + MaCu + "' ";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
+
     }
 }
