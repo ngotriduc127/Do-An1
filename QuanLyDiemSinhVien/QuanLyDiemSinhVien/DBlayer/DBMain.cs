@@ -13,10 +13,10 @@ namespace QuanLyDiemSinhVien.DBlayer
     class DBMain
     {
         //
-        //string ConnStr = @"Data Source=MSI;" + "Initial Catalog=QuanLyDiemSinhVien;" +
-        //    "Integrated Security = True"; //THAY LẠI ĐƯỜNG DẪN
-        string ConnStr = @"Data Source=DESKTOP-EQTRTVT\MSSQLSERVER2017;" + "Initial Catalog=QuanLyDiemSinhVien;" +
-            "Integrated Security = True";
+        string ConnStr = @"Data Source=MSI;" + "Initial Catalog=QuanLyDiemSinhVien;" +
+            "Integrated Security = True"; //THAY LẠI ĐƯỜNG DẪN
+        //string ConnStr = @"Data Source=DESKTOP-EQTRTVT\MSSQLSERVER2017;" + "Initial Catalog=QuanLyDiemSinhVien;" +
+          //  "Integrated Security = True";
        
         SqlConnection conn = null;
         SqlCommand comm = null;
@@ -76,8 +76,26 @@ namespace QuanLyDiemSinhVien.DBlayer
             da.Fill(ds);
             conn.Close();
             return ds.Tables[0];
-
+        }
+        public object ExcuteScalar(string strSQL, CommandType ct, ref string err) //số lượng trả ra dòng ô đầu tiên trong dataset
+        {
+            object data = 0;
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
+            }
+            conn.Open();
+            comm.CommandText = strSQL;
+            comm.CommandType = ct;
+          //  da = new SqlDataAdapter(comm);
+            DataTable tb = new DataTable();
+            data = comm.ExecuteScalar();        
+          //  da.Fill(tb);
+            conn.Close();
+            return data;
         }
         
+        
+
     }
 }
