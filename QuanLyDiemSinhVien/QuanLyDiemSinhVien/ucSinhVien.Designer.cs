@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSinhVien));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -53,48 +55,44 @@
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.ImageIndex = 0;
-            this.btnXoa.Location = new System.Drawing.Point(559, 457);
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(1040, 626);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(80, 36);
+            this.btnXoa.Size = new System.Drawing.Size(231, 94);
             this.btnXoa.TabIndex = 41;
-            this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnCapNhat
             // 
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapNhat.ImageIndex = 0;
-            this.btnCapNhat.Location = new System.Drawing.Point(287, 457);
+            this.btnCapNhat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btnCapNhat.Image")));
+            this.btnCapNhat.Location = new System.Drawing.Point(531, 626);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(125, 36);
+            this.btnCapNhat.Size = new System.Drawing.Size(233, 94);
             this.btnCapNhat.TabIndex = 40;
-            this.btnCapNhat.Text = "Cập Nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.ImageIndex = 0;
-            this.btnThem.Location = new System.Drawing.Point(55, 457);
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.Location = new System.Drawing.Point(39, 626);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(84, 36);
+            this.btnThem.Size = new System.Drawing.Size(224, 94);
             this.btnThem.TabIndex = 39;
-            this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // dgvSinhVien
             // 
             this.dgvSinhVien.AutoGenerateColumns = false;
+            this.dgvSinhVien.BackgroundColor = System.Drawing.Color.SeaShell;
             this.dgvSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSinhVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maSinhVienDataGridViewTextBoxColumn,
@@ -104,11 +102,20 @@
             this.queQuanDataGridViewTextBoxColumn,
             this.maNganhDataGridViewTextBoxColumn});
             this.dgvSinhVien.DataSource = this.sinhVienBindingSource;
+            this.dgvSinhVien.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvSinhVien.Location = new System.Drawing.Point(4, 58);
             this.dgvSinhVien.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSinhVien.Name = "dgvSinhVien";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Broadway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSinhVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSinhVien.RowHeadersWidth = 51;
-            this.dgvSinhVien.Size = new System.Drawing.Size(701, 375);
+            this.dgvSinhVien.Size = new System.Drawing.Size(1351, 492);
             this.dgvSinhVien.TabIndex = 42;
             this.dgvSinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSinhVien_CellClick_1);
             // 
@@ -118,7 +125,7 @@
             this.maSinhVienDataGridViewTextBoxColumn.HeaderText = "MaSinhVien";
             this.maSinhVienDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maSinhVienDataGridViewTextBoxColumn.Name = "maSinhVienDataGridViewTextBoxColumn";
-            this.maSinhVienDataGridViewTextBoxColumn.Width = 125;
+            this.maSinhVienDataGridViewTextBoxColumn.Width = 160;
             // 
             // tenSinhVienDataGridViewTextBoxColumn
             // 
@@ -126,7 +133,7 @@
             this.tenSinhVienDataGridViewTextBoxColumn.HeaderText = "TenSinhVien";
             this.tenSinhVienDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tenSinhVienDataGridViewTextBoxColumn.Name = "tenSinhVienDataGridViewTextBoxColumn";
-            this.tenSinhVienDataGridViewTextBoxColumn.Width = 125;
+            this.tenSinhVienDataGridViewTextBoxColumn.Width = 160;
             // 
             // ngaySinhDataGridViewTextBoxColumn
             // 
@@ -134,7 +141,7 @@
             this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "NgaySinh";
             this.ngaySinhDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
-            this.ngaySinhDataGridViewTextBoxColumn.Width = 125;
+            this.ngaySinhDataGridViewTextBoxColumn.Width = 160;
             // 
             // gioiTinhDataGridViewCheckBoxColumn
             // 
@@ -142,7 +149,7 @@
             this.gioiTinhDataGridViewCheckBoxColumn.HeaderText = "GioiTinh";
             this.gioiTinhDataGridViewCheckBoxColumn.MinimumWidth = 6;
             this.gioiTinhDataGridViewCheckBoxColumn.Name = "gioiTinhDataGridViewCheckBoxColumn";
-            this.gioiTinhDataGridViewCheckBoxColumn.Width = 125;
+            this.gioiTinhDataGridViewCheckBoxColumn.Width = 160;
             // 
             // queQuanDataGridViewTextBoxColumn
             // 
@@ -150,7 +157,7 @@
             this.queQuanDataGridViewTextBoxColumn.HeaderText = "QueQuan";
             this.queQuanDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.queQuanDataGridViewTextBoxColumn.Name = "queQuanDataGridViewTextBoxColumn";
-            this.queQuanDataGridViewTextBoxColumn.Width = 125;
+            this.queQuanDataGridViewTextBoxColumn.Width = 160;
             // 
             // maNganhDataGridViewTextBoxColumn
             // 
@@ -158,7 +165,7 @@
             this.maNganhDataGridViewTextBoxColumn.HeaderText = "MaNganh";
             this.maNganhDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maNganhDataGridViewTextBoxColumn.Name = "maNganhDataGridViewTextBoxColumn";
-            this.maNganhDataGridViewTextBoxColumn.Width = 125;
+            this.maNganhDataGridViewTextBoxColumn.Width = 160;
             // 
             // sinhVienBindingSource
             // 
@@ -181,16 +188,20 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(39, 26);
+            this.textBox1.ForeColor = System.Drawing.Color.Red;
+            this.textBox1.Location = new System.Drawing.Point(39, 15);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.Size = new System.Drawing.Size(141, 35);
             this.textBox1.TabIndex = 43;
             // 
             // ucSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SpringGreen;
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dgvSinhVien);
             this.Controls.Add(this.btnXoa);
@@ -199,7 +210,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucSinhVien";
-            this.Size = new System.Drawing.Size(1539, 911);
+            this.Size = new System.Drawing.Size(1290, 575);
             this.Load += new System.EventHandler(this.ucSinhVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sinhVienBindingSource)).EndInit();
@@ -217,15 +228,15 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dgvSinhVien;
         private QuanLyDiemSinhVienDataSet1 quanLyDiemSinhVienDataSet1;
+        private System.Windows.Forms.BindingSource sinhVienBindingSource;
+        private QuanLyDiemSinhVienDataSet2 quanLyDiemSinhVienDataSet2;
+        private QuanLyDiemSinhVienDataSet2TableAdapters.SinhVienTableAdapter sinhVienTableAdapter;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn maSinhVienDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenSinhVienDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn gioiTinhDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn queQuanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maNganhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource sinhVienBindingSource;
-        private QuanLyDiemSinhVienDataSet2 quanLyDiemSinhVienDataSet2;
-        private QuanLyDiemSinhVienDataSet2TableAdapters.SinhVienTableAdapter sinhVienTableAdapter;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

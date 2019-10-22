@@ -19,7 +19,7 @@ namespace QuanLyDiemSinhVien.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -63,9 +63,9 @@ namespace QuanLyDiemSinhVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap chopp___Copy {
+        internal static System.Drawing.Bitmap pexels_photo_1765988 {
             get {
-                object obj = ResourceManager.GetObject("chopp - Copy", resourceCulture);
+                object obj = ResourceManager.GetObject("pexels-photo-1765988", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace QuanLyDiemSinhVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dangky {
+        internal static System.Drawing.Bitmap pexels_photo_2989227 {
             get {
-                object obj = ResourceManager.GetObject("dangky", resourceCulture);
+                object obj = ResourceManager.GetObject("pexels-photo-2989227", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,79 +83,9 @@ namespace QuanLyDiemSinhVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dangnhap {
+        internal static System.Drawing.Bitmap pexels_photo_3090893 {
             get {
-                object obj = ResourceManager.GetObject("dangnhap", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iconin2 {
-            get {
-                object obj = ResourceManager.GetObject("iconin2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iconLuu {
-            get {
-                object obj = ResourceManager.GetObject("iconLuu", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iconrankkk2 {
-            get {
-                object obj = ResourceManager.GetObject("iconrankkk2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iconReset2 {
-            get {
-                object obj = ResourceManager.GetObject("iconReset2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icontruonghoc {
-            get {
-                object obj = ResourceManager.GetObject("icontruonghoc", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap khungvien {
-            get {
-                object obj = ResourceManager.GetObject("khungvien", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap truong3D {
-            get {
-                object obj = ResourceManager.GetObject("truong3D", resourceCulture);
+                object obj = ResourceManager.GetObject("pexels-photo-3090893", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -19,11 +19,11 @@ namespace QuanLyDiemSinhVien
 
         private void btnSinhVien_Click(object sender, EventArgs e)
         {
-            btnSinhVien.BackColor = Color.Yellow;
-            btnGiaoVien.BackColor = Color.White;
-            btnLop.BackColor = Color.White;
-            btnMonhoc.BackColor = Color.White;
-            btnNganh.BackColor = Color.White;
+            btnSinhVien.BackColor = Color.SeaShell;
+            btnGiaoVien.BackColor = Color.SeaShell;
+            btnLop.BackColor = Color.SeaShell;
+            btnMonhoc.BackColor = Color.SeaShell;
+            btnNganh.BackColor = Color.SeaShell;
             ucSinhVien1.BringToFront();
 
         }
@@ -66,6 +66,16 @@ namespace QuanLyDiemSinhVien
             btnMonhoc.BackColor = Color.White;
             btnNganh.BackColor = Color.Yellow;
             ucNganh1.BringToFront();
+        }
+
+        private void ThongTin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ucGiaoVien1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

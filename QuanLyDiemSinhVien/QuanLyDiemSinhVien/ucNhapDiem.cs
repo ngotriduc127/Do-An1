@@ -232,7 +232,7 @@ namespace QuanLyDiemSinhVien
                 else
                 {
                     a = 0;
-                    MessageBox.Show("Chỉ được nhập số, và phải > 0", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Chỉ được nhập số từ 0 đến 10", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     dgvDiem.CurrentCell.Value = 0;
                     dgvDiem.ClearSelection();
                     dgvDiem.CurrentCell = cuCell;

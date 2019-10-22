@@ -42,10 +42,8 @@ namespace QuanLyDiemSinhVien
                     btnThoat.BackColor = Color.SkyBlue;
                     btnThongTin.BackColor = Color.SkyBlue;
                     //
-                    ucNhapDiem1.BringToFront();
-                    ucNhapDiem1.Load_cbbLop();
-
-
+                    ucNhapDiem.BringToFront();
+                    ucNhapDiem.Load_cbbLop();
                 }
                 else
                 {
@@ -68,7 +66,7 @@ namespace QuanLyDiemSinhVien
                 btnThoat.BackColor = Color.SkyBlue;
                 btnThongTin.BackColor = Color.SkyBlue;
                 //
-                ucXemDiem1.BringToFront();
+                ucXemDiem.BringToFront();
 
 
             }
@@ -101,7 +99,6 @@ namespace QuanLyDiemSinhVien
             {
                 if (trangthaidangnhap == 4)
                 {
-
                     btnDangNhapChinh.BackColor = Color.SkyBlue;
                     btnNhapDiem.BackColor = Color.SkyBlue;
                     btnXemDiem.BackColor = Color.SkyBlue;
@@ -110,11 +107,6 @@ namespace QuanLyDiemSinhVien
                     //
                     ThongTin tt = new ThongTin();
                     tt.ShowDialog();
-
-
-
-
-
                 }
                 else
                 {
@@ -129,20 +121,10 @@ namespace QuanLyDiemSinhVien
 
         private void frmChinh_Load(object sender, EventArgs e)
         {
-            ucTieuDe1.BringToFront();
-           
+            ucTieuDe.BringToFront();          
         }
-
-        private void ucChinh1_Load(object sender, EventArgs e)
-        {
-
-        }
-        
-        private void ucNhapDiem1_Load(object sender, EventArgs e)
-        {
-            
-
-        }
+    
+ 
 
         private void btnDangNhapChinh_Click(object sender, EventArgs e)
         {
@@ -154,7 +136,7 @@ namespace QuanLyDiemSinhVien
             btnThongTin.BackColor = Color.SkyBlue;
             if (btnDangNhapChinh.Text=="ĐĂNG NHẬP")
             {
-                ucChinh1.BringToFront();
+                ucChinh.BringToFront();
             }
             else //btnDangNhapChinh.Text=="ĐĂNG XUẤT"
             {
@@ -163,7 +145,7 @@ namespace QuanLyDiemSinhVien
                 {
                     trangthaidangnhap = 0;
                     MessageBox.Show("Bạn đã đăng xuất!");
-                    ucTieuDe1.BringToFront();
+                    ucTieuDe.BringToFront();
                     btnDangNhapChinh.BackColor = Color.SkyBlue;
                     btnDangNhapChinh.Text = "ĐĂNG NHẬP";
                     thaydoinoidungbtndangnhapchinh = 0;
@@ -204,7 +186,7 @@ namespace QuanLyDiemSinhVien
             else if (trangthaidangnhap==4)  //Hiệu Trưởng
             {
                 btnThongTin.Visible = true;
-
+                btnXemDiem.Visible = true;
             }
              else if (trangthaidangnhap==0)
             {
@@ -215,5 +197,6 @@ namespace QuanLyDiemSinhVien
 
 
         }
+
     }
 }

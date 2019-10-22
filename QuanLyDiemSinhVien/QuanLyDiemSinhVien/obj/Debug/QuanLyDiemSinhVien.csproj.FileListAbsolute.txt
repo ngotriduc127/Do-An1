@@ -58,7 +58,6 @@ D:\HK1(3)\DoAn1\New folder\QuanLyDiemSinhVien\QuanLyDiemSinhVien\bin\Debug\Entit
 D:\HK1(3)\DoAn1\New folder\QuanLyDiemSinhVien\QuanLyDiemSinhVien\bin\Debug\EntityFramework.SqlServer.dll
 D:\HK1(3)\DoAn1\New folder\QuanLyDiemSinhVien\QuanLyDiemSinhVien\bin\Debug\EntityFramework.xml
 D:\HK1(3)\DoAn1\New folder\QuanLyDiemSinhVien\QuanLyDiemSinhVien\bin\Debug\EntityFramework.SqlServer.xml
-D:\HK1(3)\DoAn1\New folder\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.csprojAssemblyReference.cache
 D:\HK1(3)\DoAn1\New folder\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.frmChinh.resources
 D:\HK1(3)\DoAn1\New folder\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.Properties.Resources.resources
 D:\HK1(3)\DoAn1\New folder\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ThongTin.resources
