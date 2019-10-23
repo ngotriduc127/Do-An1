@@ -39,11 +39,11 @@ namespace QuanLyDiemSinhVien
                     btnDangNhapChinh.BackColor = Color.SkyBlue;
                     btnNhapDiem.BackColor = Color.Yellow;
                     btnXemDiem.BackColor = Color.SkyBlue;
-                    btnThoat.BackColor = Color.SkyBlue;
+                    btnThoat2.BackColor = Color.SkyBlue;
                     btnThongTin.BackColor = Color.SkyBlue;
                     //
-                    ucNhapDiem.BringToFront();
-                    ucNhapDiem.Load_cbbLop();
+                    ucNhapDiem3.BringToFront();
+                    ucNhapDiem3.Load_cbbLop();
                 }
                 else
                 {
@@ -63,10 +63,10 @@ namespace QuanLyDiemSinhVien
                 btnDangNhapChinh.BackColor = Color.SkyBlue;
                 btnNhapDiem.BackColor = Color.SkyBlue;
                 btnXemDiem.BackColor = Color.Yellow;
-                btnThoat.BackColor = Color.SkyBlue;
+                btnThoat2.BackColor = Color.SkyBlue;
                 btnThongTin.BackColor = Color.SkyBlue;
                 //
-                ucXemDiem.BringToFront();
+                ucXemDiem2.BringToFront();
 
 
             }
@@ -76,22 +76,6 @@ namespace QuanLyDiemSinhVien
             }
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            btnDangNhapChinh.BackColor = Color.SkyBlue;
-            btnNhapDiem.BackColor = Color.SkyBlue;
-            btnXemDiem.BackColor = Color.SkyBlue;
-            btnThoat.BackColor = Color.Yellow;
-            btnThongTin.BackColor = Color.SkyBlue;
-
-            DialogResult dialog = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialog == DialogResult.Yes)
-                Application.Exit();
-            else if (dialog == DialogResult.No)
-            {
-                btnThoat.BackColor = Color.SkyBlue;
-            }
-        }
 
         private void btnThongTin_Click(object sender, EventArgs e)
         {
@@ -102,7 +86,7 @@ namespace QuanLyDiemSinhVien
                     btnDangNhapChinh.BackColor = Color.SkyBlue;
                     btnNhapDiem.BackColor = Color.SkyBlue;
                     btnXemDiem.BackColor = Color.SkyBlue;
-                    btnThoat.BackColor = Color.SkyBlue;
+                    btnThoat2.BackColor = Color.SkyBlue;
                     btnThongTin.BackColor = Color.Yellow;
                     //
                     ThongTin tt = new ThongTin();
@@ -121,7 +105,7 @@ namespace QuanLyDiemSinhVien
 
         private void frmChinh_Load(object sender, EventArgs e)
         {
-            ucTieuDe.BringToFront();          
+            ucTieuDe2.BringToFront();          
         }
     
  
@@ -132,11 +116,11 @@ namespace QuanLyDiemSinhVien
             btnDangNhapChinh.BackColor = Color.Yellow;
             btnNhapDiem.BackColor = Color.SkyBlue;
             btnXemDiem.BackColor = Color.SkyBlue;
-            btnThoat.BackColor = Color.SkyBlue;
+            btnThoat2.BackColor = Color.SkyBlue;
             btnThongTin.BackColor = Color.SkyBlue;
             if (btnDangNhapChinh.Text=="ĐĂNG NHẬP")
             {
-                ucChinh.BringToFront();
+                ucChinh2.BringToFront();
             }
             else //btnDangNhapChinh.Text=="ĐĂNG XUẤT"
             {
@@ -145,7 +129,7 @@ namespace QuanLyDiemSinhVien
                 {
                     trangthaidangnhap = 0;
                     MessageBox.Show("Bạn đã đăng xuất!");
-                    ucTieuDe.BringToFront();
+                    //ucTieuDe.BringToFront();
                     btnDangNhapChinh.BackColor = Color.SkyBlue;
                     btnDangNhapChinh.Text = "ĐĂNG NHẬP";
                     thaydoinoidungbtndangnhapchinh = 0;
@@ -198,5 +182,21 @@ namespace QuanLyDiemSinhVien
 
         }
 
+        private void btnThoat2_Click(object sender, EventArgs e)
+        {
+            btnDangNhapChinh.BackColor = Color.SkyBlue;
+            btnNhapDiem.BackColor = Color.SkyBlue;
+            btnXemDiem.BackColor = Color.SkyBlue;
+            btnThoat2.BackColor = Color.Yellow;
+            btnThongTin.BackColor = Color.SkyBlue;
+
+            DialogResult dialog = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialog == DialogResult.Yes)
+                Application.Exit();
+            else if (dialog == DialogResult.No)
+            {
+                btnThoat2.BackColor = Color.SkyBlue;
+            }
+        }
     }
 }

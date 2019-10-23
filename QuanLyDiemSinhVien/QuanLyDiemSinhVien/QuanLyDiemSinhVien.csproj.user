@@ -3,4 +3,8 @@
   <PropertyGroup>
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartAction>Project</StartAction>
+    <StartProgram>D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien.sln</StartProgram>
+  </PropertyGroup>
 </Project>

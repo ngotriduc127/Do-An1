@@ -76,3 +76,29 @@ D:\HK1(3)\DoAn1\New folder\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanL
 D:\HK1(3)\DoAn1\New folder\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.csproj.CopyComplete
 D:\HK1(3)\DoAn1\New folder\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.exe
 D:\HK1(3)\DoAn1\New folder\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.pdb
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.frmChinh.resources
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.Properties.Resources.resources
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ThongTin.resources
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucChinh_DangKy.resources
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucChinh.resources
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucDoiMatKhau.resources
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucGiaoVien.resources
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucLop.resources
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucMonHoc.resources
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucNganh.resources
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucNhapDiem.resources
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucSinhVien.resources
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucTieuDe.resources
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.ucXemDiem.resources
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.csproj.GenerateResource.cache
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\bin\Debug\QuanLyDiemSinhVien.exe.config
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\bin\Debug\QuanLyDiemSinhVien.exe
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\bin\Debug\QuanLyDiemSinhVien.pdb
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\bin\Debug\EntityFramework.dll
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\bin\Debug\EntityFramework.SqlServer.dll
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\bin\Debug\EntityFramework.xml
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\bin\Debug\EntityFramework.SqlServer.xml
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.csproj.CopyComplete
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.exe
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.pdb
+D:\saoluu_DoAn1\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.csprojAssemblyReference.cache

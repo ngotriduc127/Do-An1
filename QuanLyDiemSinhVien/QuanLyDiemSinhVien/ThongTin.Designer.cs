@@ -183,7 +183,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SpringGreen;
-            this.ClientSize = new System.Drawing.Size(1540, 733);
+            this.ClientSize = new System.Drawing.Size(1362, 733);
             this.Controls.Add(this.pnButton);
             this.Controls.Add(this.ucNganh1);
             this.Controls.Add(this.ucMonHoc1);
