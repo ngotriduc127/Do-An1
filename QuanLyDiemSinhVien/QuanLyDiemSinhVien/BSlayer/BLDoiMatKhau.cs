@@ -26,5 +26,11 @@ namespace QuanLyDiemSinhVien.BSlayer
                 matkhaucu + "')";
             return db.MyExecuteNonQuery(strSQL, CommandType.Text, ref err);
         }
+        public DataTable LayMK(string UserName, ref string err)
+        {
+            string sqlString = "Select MatKhau from DangNhap where TenDangNhap='" + UserName + "' ";
+            return db.GetDataTable(sqlString, CommandType.Text, ref err);
+
+        }
     }
 }

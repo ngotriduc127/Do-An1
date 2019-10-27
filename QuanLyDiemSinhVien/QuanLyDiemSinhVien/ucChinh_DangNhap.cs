@@ -113,5 +113,99 @@ namespace QuanLyDiemSinhVien
             this.Controls.Add(ucDoiMatKhau);
             
         }
+        // -------------------------------------------
+
+
+
+
+
+        private void btnDangNhap_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtTenDangNhap.Text == "" || txtMatKhau.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập tên đăng nhập hoặc mật khẩu!", "Thông báo");
+                    return;
+                }
+
+                //
+                BLDangNhap blDN = new BLDangNhap();
+                DataTable dt = blDN.LayUser(this.txtTenDangNhap.Text, this.txtMatKhau.Text, ref err);
+
+                if (dt.Rows.Count > 0)  // Nếu tài khoản và mật khẩu đúng thì bảng sẽ có hàng mới
+                {
+                    //
+                    DataTable CHUCVU = blDN.LayQuyen(this.txtTenDangNhap.Text, this.txtMatKhau.Text, ref err);
+                    //frmChinh.chucvu = CHUCVU.Rows[0][0].ToString();//Lấy chức vụ
+                    string a = CHUCVU.Rows[0][0].ToString().TrimEnd();//Lấy chức vụ
+                    BLDangNhap.username = txtTenDangNhap.Text;
+                    BLDangNhap.password = txtMatKhau.Text;
+
+
+                    MessageBox.Show("Bạn đã đăng nhập thành công!", "Thông báo");
+                    frmChinh.thaydoinoidungbtndangnhapchinh = 1;
+                    //frmChinh.btnDangNhapChinh.Text = "ĐĂNG XUẤT";
+
+
+                    this.SendToBack();
+                    ucTieuDe uc = new ucTieuDe();
+                    uc.BringToFront();
+
+
+                    //frmChinh.thaydoinoidungbtndangnhapchinh = 1;
+                    txtMatKhau.ResetText();
+                    txtTenDangNhap.ResetText();
+
+                    //Khi dang nhap thanh cong thi moi duoc vao cac button khac
+                    frmChinh.trangthaidangnhap = 1;
+                    //  
+                    if (a == "Sinh Viên")
+                    {
+                        frmChinh.trangthaidangnhap = 2;
+                    }
+                    if (a == "Giáo Viên")
+                    {
+                        frmChinh.trangthaidangnhap = 3;
+                    }
+                    if (a == "Hi?u Tru?ng")   // Lỗi phông chữ
+                    {
+                        frmChinh.trangthaidangnhap = 4;
+
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Đăng nhập không thành công!", "Thông báo");
+                    txtTenDangNhap.Clear();
+                    txtMatKhau.Clear();
+                    txtTenDangNhap.Focus();
+                }
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Lỗi SQL!!!");
+            }
+        }
+
+        private void lbDangKyTaiKhoan_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ucChinh_DangKy ucChinh_DangKy = new ucChinh_DangKy();
+
+            this.Controls.Clear();
+            ucChinh_DangKy.Dock = DockStyle.Fill;
+            this.Controls.Add(ucChinh_DangKy);
+        }
+
+        private void linkLbDoiMatKhau_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            ucDoiMatKhau ucDoiMatKhau = new ucDoiMatKhau();
+
+            this.Controls.Clear();
+            ucDoiMatKhau.Dock = DockStyle.Fill;
+            this.Controls.Add(ucDoiMatKhau);
+        }
     }
 }

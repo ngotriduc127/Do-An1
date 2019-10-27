@@ -23,11 +23,6 @@ namespace QuanLyDiemSinhVien
             trangthaidangnhap = 0;
             InitializeComponent();
         }
-        
-        //internal void BringToFront(ucChinh_DangKy ucChinh_DangKy)
-        //{
-        //    throw new NotImplementedException();
-        //}
 
         private void btnNhapDiem_Click(object sender, EventArgs e)
         {
@@ -41,6 +36,7 @@ namespace QuanLyDiemSinhVien
                     btnXemDiem.BackColor = Color.SkyBlue;
                     btnThoat2.BackColor = Color.SkyBlue;
                     btnThongTin.BackColor = Color.SkyBlue;
+                    thongtin.BackColor = Color.SkyBlue;
                     //
                     ucNhapDiem3.BringToFront();
                     ucNhapDiem3.Load_cbbLop();
@@ -60,10 +56,12 @@ namespace QuanLyDiemSinhVien
         {
             if (trangthaidangnhap >0)
             {
-                btnDangNhapChinh.BackColor = Color.SkyBlue;                btnNhapDiem.BackColor = Color.SkyBlue;
+                btnDangNhapChinh.BackColor = Color.SkyBlue;                
+                btnNhapDiem.BackColor = Color.SkyBlue;
                 btnXemDiem.BackColor = Color.Yellow;
                 btnThoat2.BackColor = Color.SkyBlue;
                 btnThongTin.BackColor = Color.SkyBlue;
+                thongtin.BackColor = Color.SkyBlue;
                 //
                 ucXemDiem2.BringToFront();
 
@@ -87,6 +85,7 @@ namespace QuanLyDiemSinhVien
                     btnXemDiem.BackColor = Color.SkyBlue;
                     btnThoat2.BackColor = Color.SkyBlue;
                     btnThongTin.BackColor = Color.Yellow;
+                    thongtin.BackColor = Color.Yellow;
                     //
                     ThongTin tt = new ThongTin();
                     tt.ShowDialog();
@@ -104,7 +103,9 @@ namespace QuanLyDiemSinhVien
 
         private void frmChinh_Load(object sender, EventArgs e)
         {
-            ucTieuDe2.BringToFront();          
+            ucTieuDe2.BringToFront();
+            var ucDangKy = new ucChinh_DangKy();
+            this.Controls.Add(ucDangKy);
         }
     
  
@@ -117,6 +118,7 @@ namespace QuanLyDiemSinhVien
             btnXemDiem.BackColor = Color.SkyBlue;
             btnThoat2.BackColor = Color.SkyBlue;
             btnThongTin.BackColor = Color.SkyBlue;
+            thongtin.BackColor = Color.SkyBlue;
             if (btnDangNhapChinh.Text=="ĐĂNG NHẬP")
             {
                 ucChinh2.BringToFront();
@@ -170,12 +172,14 @@ namespace QuanLyDiemSinhVien
             {
                 btnThongTin.Visible = true;
                 btnXemDiem.Visible = true;
+                thongtin.Visible = true;
             }
              else if (trangthaidangnhap==0)
             {
                 btnXemDiem.Visible = false;
                 btnNhapDiem.Visible = false;
                 btnThongTin.Visible = false;
+                thongtin.Visible = false;
             }
 
 
@@ -188,6 +192,7 @@ namespace QuanLyDiemSinhVien
             btnXemDiem.BackColor = Color.SkyBlue;
             btnThoat2.BackColor = Color.Yellow;
             btnThongTin.BackColor = Color.SkyBlue;
+            thongtin.BackColor = Color.SkyBlue;
 
             DialogResult dialog = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
@@ -196,6 +201,11 @@ namespace QuanLyDiemSinhVien
             {
                 btnThoat2.BackColor = Color.SkyBlue;
             }
+        }
+
+        private void ucChinh2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

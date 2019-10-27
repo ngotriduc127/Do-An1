@@ -13,10 +13,10 @@ namespace QuanLyDiemSinhVien.DBlayer
     class DBMain
     {
         //
-        string ConnStr = @"Data Source=MSI;" + "Initial Catalog=QuanLyDiemSinhVien;" +
-            "Integrated Security = True"; //THAY LẠI ĐƯỜNG DẪN
-        //string ConnStr = @"Data Source=DESKTOP-EQTRTVT;" + "Initial Catalog=QuanLyDiemSinhVien;" +
-            //"Integrated Security = True";
+        //string ConnStr = @"Data Source=MSI;" + "Initial Catalog=QuanLyDiemSinhVien;" +
+            //"Integrated Security = True"; //THAY LẠI ĐƯỜNG DẪN
+        string ConnStr = @"Data Source=DESKTOP-EQTRTVT;" + "Initial Catalog=QuanLyDiemSinhVien;" +
+            "Integrated Security = True";
        
         SqlConnection conn = null;
         SqlCommand comm = null;

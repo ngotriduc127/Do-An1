@@ -93,88 +93,8 @@ namespace QuanLyDiemSinhVien
                 MessageBox.Show("Không lấy được nội dung trong bảng !");
             }
         }
-        private void btnXem_Click(object sender, EventArgs e)
-        {
-            Load_Dgv();
-            btnLuu.Visible = true;
-            btnReset.Visible = true;
-            btnXepLoai.Visible = true;
-            btnIn.Visible = true;
-        }
-
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                for (int i = 0; i < dgvDiem.RowCount - 1; i++)
-                {
-                    float diemtb = (float.Parse(dgvDiem.Rows[i].Cells[2].Value.ToString()) +
-                        float.Parse(dgvDiem.Rows[i].Cells[3].Value.ToString()) +
-                        float.Parse(dgvDiem.Rows[i].Cells[4].Value.ToString()) +
-                        float.Parse(dgvDiem.Rows[i].Cells[5].Value.ToString()) +
-                        float.Parse(dgvDiem.Rows[i].Cells[6].Value.ToString()) +
-                        float.Parse(dgvDiem.Rows[i].Cells[7].Value.ToString()) +
-                        float.Parse(dgvDiem.Rows[i].Cells[8].Value.ToString())
-                        ) / 7; //Tinh Diem Trung Binh
-
-
-                    blnd.CapNhat(dgvDiem.Rows[i].Cells[0].Value.ToString(),
-                        float.Parse(dgvDiem.Rows[i].Cells[2].Value.ToString()),
-                        float.Parse(dgvDiem.Rows[i].Cells[3].Value.ToString()),
-                        float.Parse(dgvDiem.Rows[i].Cells[4].Value.ToString()),
-                        float.Parse(dgvDiem.Rows[i].Cells[5].Value.ToString()),
-                        float.Parse(dgvDiem.Rows[i].Cells[6].Value.ToString()),
-                        float.Parse(dgvDiem.Rows[i].Cells[7].Value.ToString()),
-                        float.Parse(dgvDiem.Rows[i].Cells[8].Value.ToString()),
-                        float.Parse((Math.Ceiling(diemtb * 100) / 100).ToString()), ref err);
-                    //dgvDiem.CurrentRow.Cells
-
-                }
-                Load_Dgv();
-                MessageBox.Show("Lưu thành công!");
-
-                
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Lỗi nhập điểm!");
-            }
-        }
-
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            for (int i = 2; i < 10; i++)
-                dgvDiem.CurrentRow.Cells[i].Value = 0;
-
-
-
-        }
-
-        private void btnXepLoai_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < dgvDiem.RowCount - 1; i++)
-            {
-                if (float.Parse(dgvDiem.Rows[i].Cells[9].Value.ToString()) >= 8)
-                {
-                    dgvDiem.Rows[i].Cells[10].Value = "Giỏi";
-                }
-                if ((float.Parse(dgvDiem.Rows[i].Cells[9].Value.ToString()) < 8) && (float.Parse(dgvDiem.Rows[i].Cells[9].Value.ToString()) >= 6.5))
-                {
-                    dgvDiem.Rows[i].Cells[10].Value = "Khá";
-                }
-                if ((float.Parse(dgvDiem.Rows[i].Cells[9].Value.ToString()) < 6.5) && (float.Parse(dgvDiem.Rows[i].Cells[9].Value.ToString()) > 5))
-                {
-                    dgvDiem.Rows[i].Cells[10].Value = "Trung Bình";
-                }
-                if ((float.Parse(dgvDiem.Rows[i].Cells[9].Value.ToString()) < 5) && (float.Parse(dgvDiem.Rows[i].Cells[9].Value.ToString()) > 0))
-                {
-                    dgvDiem.Rows[i].Cells[10].Value = "Yếu";
-                }
-                if (float.Parse(dgvDiem.Rows[i].Cells[9].Value.ToString()) == 0)
-                    dgvDiem.Rows[i].Cells[10].Value = "Chưa Xếp Loại";
-            }
-        }
+    
+       
         //Hàm in
         private void InExcel(DataGridView dgv, string duongdan, string tentep)
         {
@@ -206,18 +126,108 @@ namespace QuanLyDiemSinhVien
             MessageBox.Show("Đã in thành tệp excel trong thư mục D:\"");
         }
 
+  
+        //--------------------------------------------------------------------------
 
 
 
+        private void btnXem_Click_1(object sender, EventArgs e)
+        {
+
+            Load_Dgv();
+            btnLuu.Visible = true;
+            btnReset.Visible = true;
+            btnXepLoai.Visible = true;
+            btnIn.Visible = true;
+        }
+
+        private void btnIn_Click_1(object sender, EventArgs e)
+        {
+            InExcel(dgvDiem, @"D:\", "DiemSinhVien");
+            MessageBox.Show("Đã in thành tệp excel trong thư mục D:\"");
+        }
+
+        private void btnXepLoai_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvDiem.RowCount - 1; i++)
+            {
+                if (float.Parse(dgvDiem.Rows[i].Cells[9].Value.ToString()) >= 8)
+                {
+                    dgvDiem.Rows[i].Cells[10].Value = "Giỏi";
+                }
+                if ((float.Parse(dgvDiem.Rows[i].Cells[9].Value.ToString()) < 8) && (float.Parse(dgvDiem.Rows[i].Cells[9].Value.ToString()) >= 6.5))
+                {
+                    dgvDiem.Rows[i].Cells[10].Value = "Khá";
+                }
+                if ((float.Parse(dgvDiem.Rows[i].Cells[9].Value.ToString()) < 6.5) && (float.Parse(dgvDiem.Rows[i].Cells[9].Value.ToString()) > 5))
+                {
+                    dgvDiem.Rows[i].Cells[10].Value = "Trung Bình";
+                }
+                if ((float.Parse(dgvDiem.Rows[i].Cells[9].Value.ToString()) < 5) && (float.Parse(dgvDiem.Rows[i].Cells[9].Value.ToString()) > 0))
+                {
+                    dgvDiem.Rows[i].Cells[10].Value = "Yếu";
+                }
+                if (float.Parse(dgvDiem.Rows[i].Cells[9].Value.ToString()) == 0)
+                    dgvDiem.Rows[i].Cells[10].Value = "Chưa Xếp Loại";
+            }
+        }
+
+        private void btnReset_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Bạn có muốn xóa điểm của sinh viên này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialog == DialogResult.Yes)
+            {
+                for (int i = 2; i < 10; i++)
+                    dgvDiem.CurrentRow.Cells[i].Value = 0;
+            }
+            else if (dialog == DialogResult.No)
+            {
+                //
+            }
+            
+        }
+
+        private void btnLuu_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                for (int i = 0; i < dgvDiem.RowCount - 1; i++)
+                {
+                    float diemtb = (float.Parse(dgvDiem.Rows[i].Cells[2].Value.ToString()) +
+                        float.Parse(dgvDiem.Rows[i].Cells[3].Value.ToString()) +
+                        float.Parse(dgvDiem.Rows[i].Cells[4].Value.ToString()) +
+                        float.Parse(dgvDiem.Rows[i].Cells[5].Value.ToString()) +
+                        float.Parse(dgvDiem.Rows[i].Cells[6].Value.ToString()) +
+                        float.Parse(dgvDiem.Rows[i].Cells[7].Value.ToString()) +
+                        float.Parse(dgvDiem.Rows[i].Cells[8].Value.ToString())
+                        ) / 7; //Tinh Diem Trung Binh
 
 
-        //public bool IsNumber(string pText)  //hàm kiểm tra giá trị nhập vào là số 
-        //{
-        //    Regex regex = new Regex(@"^[-+]?[0-9]*\.?[0-9]+$");
-        //    return regex.IsMatch(pText);
-        //}
+                    blnd.CapNhat(dgvDiem.Rows[i].Cells[0].Value.ToString(),
+                        float.Parse(dgvDiem.Rows[i].Cells[2].Value.ToString()),
+                        float.Parse(dgvDiem.Rows[i].Cells[3].Value.ToString()),
+                        float.Parse(dgvDiem.Rows[i].Cells[4].Value.ToString()),
+                        float.Parse(dgvDiem.Rows[i].Cells[5].Value.ToString()),
+                        float.Parse(dgvDiem.Rows[i].Cells[6].Value.ToString()),
+                        float.Parse(dgvDiem.Rows[i].Cells[7].Value.ToString()),
+                        float.Parse(dgvDiem.Rows[i].Cells[8].Value.ToString()),
+                        float.Parse((Math.Ceiling(diemtb * 100) / 100).ToString()), ref err);
+                    //dgvDiem.CurrentRow.Cells
 
-        private void dgvDiem_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+                }
+                Load_Dgv();
+                MessageBox.Show("Lưu thành công!");
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Lỗi nhập điểm!");
+            }
+        }
+
+        //Sự kiện khi tác động đến cell để lấy giá trị ban đầu của cell
+        private void dgvDiem_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
         {
             int a = 0;
             float GiaTriCu = float.Parse(dgvDiem.CurrentCell.Value.ToString());
@@ -252,8 +262,8 @@ namespace QuanLyDiemSinhVien
                 }
             }
         }
-        //Sự kiện khi tác động đến cell để lấy giá trị ban đầu của cell
-        private void dgvDiem_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+
+        private void dgvDiem_CellBeginEdit_1(object sender, DataGridViewCellCancelEventArgs e)
         {
             giatribandau = float.Parse(dgvDiem.CurrentCell.Value.ToString());
             DataGridViewCell cuCell = dgvDiem.CurrentCell;
@@ -277,7 +287,7 @@ namespace QuanLyDiemSinhVien
             }
         }
 
-        private void dgvDiem_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        private void dgvDiem_DataError_1(object sender, DataGridViewDataErrorEventArgs e)
         {
             MessageBox.Show("Chỉ được nhập giá trị số!");
         }
