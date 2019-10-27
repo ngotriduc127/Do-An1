@@ -47,6 +47,7 @@ namespace QuanLyDiemSinhVien
             Load_Data();
         }
 
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             try
@@ -56,45 +57,59 @@ namespace QuanLyDiemSinhVien
 
 
                 Load_Data();
-                MessageBox.Show("thêm Thành công :))");
+                MessageBox.Show("Đã thêm xong!");
             }
             catch (Exception)
             {
-                MessageBox.Show("lỗi cmnr :((");
-            }
-        }
+                MessageBox.Show("Thông Báo", "Hình Như Một Thông Tin Nào Đó Đã Nhập Sai", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
 
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-
-            Nganh nganhh = new Nganh();
-
-            DialogResult traloi;
-            traloi = MessageBox.Show("Bạn có chắc muốn xóa nhân viên này không?", "Trả lời",
-            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (traloi == DialogResult.Yes)
-            {
-                nganhh.Xoa(dgvNganh.CurrentRow.Cells[0].Value.ToString(), ref err);
-                // Cập nhật lại DataGridView
-                Load_Data();
-                MessageBox.Show("Đã xóa xong!");
-            }
-            else
-            {
-                MessageBox.Show("Không thực hiện việc xóa!");
             }
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            Nganh nganhh = new Nganh();
-            BLSinhVien SinhVien = new BLSinhVien();
+            try
+            {
+                Nganh nganhh = new Nganh();
+                BLSinhVien SinhVien = new BLSinhVien();
 
-            nganhh.CapNhat(dgvNganh.CurrentRow.Cells[1].Value.ToString(), dgvNganh.CurrentRow.Cells[0].Value.ToString(), textBox1.Text.ToString(), ref err);
-            SinhVien.CapNhatSV2(dgvNganh.CurrentRow.Cells[0].Value.ToString(), ref err);
-            Load_Data();
-            SinhVien.LaySV();
+                nganhh.CapNhat(dgvNganh.CurrentRow.Cells[1].Value.ToString(), dgvNganh.CurrentRow.Cells[0].Value.ToString(), textBox1.Text.ToString(), ref err);
+                SinhVien.CapNhatSV2(dgvNganh.CurrentRow.Cells[0].Value.ToString(), ref err);
+                Load_Data();
+                SinhVien.LaySV();
+                MessageBox.Show("Đã sửa xong!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Thông Báo", "Bạn Đã Nhập Sai Thông Tin Nào Đó Mời Bạn Nhập Lại", MessageBoxButtons.OK, MessageBoxIcon.Question);
 
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Nganh nganhh = new Nganh();
+
+                DialogResult traloi;
+                traloi = MessageBox.Show("Bạn có chắc muốn xóa nhân viên này không?", "Trả lời",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (traloi == DialogResult.Yes)
+                {
+                    nganhh.Xoa(dgvNganh.CurrentRow.Cells[0].Value.ToString(), ref err);
+                    // Cập nhật lại DataGridView
+                    Load_Data();
+                    MessageBox.Show("Đã xóa xong!");
+                }
+                else
+                {
+                    MessageBox.Show("Không thực hiện việc xóa!");
+                }
+            }catch(Exception)
+            {
+                MessageBox.Show("Thông Báo", "Hmmm.Đã lỗi chổ nào rồi sao?? ,Báo cáo lại với người tạo ra phần mềm giúp mình nhé", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void dgvNganh_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -102,7 +117,5 @@ namespace QuanLyDiemSinhVien
             int r = dgvNganh.CurrentCell.RowIndex;
             textBox1.Text = dgvNganh.Rows[r].Cells[0].Value.ToString();
         }
-
-
     }
 }

@@ -41,51 +41,14 @@ namespace QuanLyDiemSinhVien
         {
             Load_Data();
         }
+
         private void dgvGiaoVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int r = dgvGiaoVien.CurrentCell.RowIndex;
             textBox1.Text = dgvGiaoVien.Rows[r].Cells[0].Value.ToString();
         }
 
-        private void btnThem_Click_1(object sender, EventArgs e)
-        {
-
-            try
-            {
-                gv.Them(dgvGiaoVien.CurrentRow.Cells[0].Value.ToString(),
-              dgvGiaoVien.CurrentRow.Cells[1].Value.ToString(),
-              dgvGiaoVien.CurrentRow.Cells[2].Value.ToString(),
-              dgvGiaoVien.CurrentRow.Cells[3].Value.ToString(),
-              ref err);
-                Load_Data();
-                MessageBox.Show("thêm Thành công :))");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Lỗi rồi");
-            }
-        }
-    private void btnXoa_Click(object sender, EventArgs e)
-        {
-             BLLop lop = new BLLop();
-             DialogResult traloi;
-             traloi = MessageBox.Show("Bạn có chắc muốn xóa nhân viên này không?", "Trả lời",
-             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        if (traloi == DialogResult.Yes)
-        {
-            gv.Xoa(dgvGiaoVien.CurrentRow.Cells[0].Value.ToString(), ref err);
-                lop.XoaMaGV(dgvGiaoVien.CurrentRow.Cells[3].Value.ToString(), ref err);
-            Load_Data();
-                lop.LayTT();
-            MessageBox.Show("Đã xóa xong!");
-        }
-        else
-        {
-            MessageBox.Show("Không thực hiện việc xóa!");
-        }
-    }
-
-        private void btnCapNhat_Click_1(object sender, EventArgs e)
+        private void btnCapNhat_Click(object sender, EventArgs e)
         {
             try
             {
@@ -99,7 +62,53 @@ namespace QuanLyDiemSinhVien
             }
             catch (Exception)
             {
-                MessageBox.Show("");
+                MessageBox.Show("Thông Báo", "Bạn Đã Nhập Sai Thông Tin Nào Đó Mời Bạn Nhập Lại", MessageBoxButtons.OK, MessageBoxIcon.Question);
+
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BLLop lop = new BLLop();
+                DialogResult traloi;
+                traloi = MessageBox.Show("Bạn có chắc muốn xóa nhân viên này không?", "Trả lời",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (traloi == DialogResult.Yes)
+                {
+                    gv.Xoa(dgvGiaoVien.CurrentRow.Cells[0].Value.ToString(), ref err);
+                    lop.XoaMaGV(dgvGiaoVien.CurrentRow.Cells[3].Value.ToString(), ref err);
+                    Load_Data();
+                    lop.LayTT();
+                    MessageBox.Show("Đã xóa xong!");
+                }
+                else
+                {
+                    MessageBox.Show("Không thực hiện việc xóa!");
+                }
+            }catch(Exception)
+            {
+                MessageBox.Show("Thông Báo", "Hmmm.Đã lỗi chổ nào rồi sao?? ,Báo cáo lại với người tạo ra phần mềm giúp mình nhé", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                gv.Them(dgvGiaoVien.CurrentRow.Cells[0].Value.ToString(),
+              dgvGiaoVien.CurrentRow.Cells[1].Value.ToString(),
+              dgvGiaoVien.CurrentRow.Cells[2].Value.ToString(),
+              dgvGiaoVien.CurrentRow.Cells[3].Value.ToString(),
+              ref err);
+                Load_Data();
+                MessageBox.Show("thêm Thành công :))");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Thông Báo", "Hình Như Một Thông Tin Nào Đó Đã Nhập Sai", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
     }

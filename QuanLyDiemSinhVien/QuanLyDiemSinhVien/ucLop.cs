@@ -42,10 +42,59 @@ namespace QuanLyDiemSinhVien
             Load_Data();
         }
 
-        private void dgvLop_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dgvLop_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int r = dgvLop.CurrentCell.RowIndex;
             textBox1.Text = dgvLop.Rows[r].Cells[0].Value.ToString();
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                BLLop lop = new BLLop();
+                lop.CapNhatMaLop(dgvLop.CurrentRow.Cells[1].Value.ToString(),
+                    dgvLop.CurrentRow.Cells[2].Value.ToString(),
+                    dgvLop.CurrentRow.Cells[3].Value.ToString(),
+                    dgvLop.CurrentRow.Cells[0].Value.ToString(),
+                    textBox1.Text,
+                    ref err);
+                Load_Data();
+                MessageBox.Show("Cập nhật thành công ");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Thông Báo","Bạn Đã Nhập 1 Số Thông Tin Sai",MessageBoxButtons.YesNo,MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BLXemDiem xd = new BLXemDiem();
+                DialogResult traloi;
+                traloi = MessageBox.Show("Bạn có chắc muốn xóa nhân viên này không?", "Trả lời",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (traloi == DialogResult.Yes)
+                {
+                    lop.XoaML(dgvLop.CurrentRow.Cells[0].Value.ToString(), ref err);
+                    xd.XoaMaLOP(dgvLop.CurrentRow.Cells[1].Value.ToString(), ref err);
+                    Load_Data();
+                    MessageBox.Show("Đã xóa xong!");
+                    xd.LayTT();
+
+                }
+                else
+                {
+                    MessageBox.Show("Không thực hiện việc xóa!");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Thông Báo", "Hmmm.Đã lỗi chổ nào rồi sao?? ,Báo cáo lại với người tạo ra phần mềm giúp mình nhé", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -63,55 +112,7 @@ namespace QuanLyDiemSinhVien
             }
             catch (Exception)
             {
-                MessageBox.Show("lỗi rồi :((");
-            }
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-           try
-            {
-                BLXemDiem xd = new BLXemDiem();
-                DialogResult traloi;
-                traloi = MessageBox.Show("Bạn có chắc muốn xóa nhân viên này không?", "Trả lời",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (traloi == DialogResult.Yes)
-                {
-                    lop.XoaML(dgvLop.CurrentRow.Cells[0].Value.ToString(), ref err);
-                    xd.XoaMaLOP(dgvLop.CurrentRow.Cells[1].Value.ToString(),ref err);
-                    Load_Data();
-                    MessageBox.Show("Đã xóa xong!");
-                    xd.LayTT();
-                   
-                }
-                else
-                {
-                    MessageBox.Show("Không thực hiện việc xóa!");
-                }
-            }
-            catch (Exception)
-            {
-               MessageBox.Show("Không xóa được. Lỗi rồi!");
-            }
-       }
-
-        private void btnCapNhat_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-                BLLop lop = new BLLop();               
-                lop.CapNhatMaLop(dgvLop.CurrentRow.Cells[1].Value.ToString(),
-                    dgvLop.CurrentRow.Cells[2].Value.ToString(),
-                    dgvLop.CurrentRow.Cells[3].Value.ToString(),
-                    dgvLop.CurrentRow.Cells[0].Value.ToString(),
-                    textBox1.Text,
-                    ref err);
-                Load_Data();
-                MessageBox.Show("Cập nhật thành công ");
-            }catch(Exception)
-            {
-                MessageBox.Show("Không cập nhật được");
+                MessageBox.Show("Thông Báo", "Hình Như Một Thông Tin Nào Đó Đã Nhập Sai", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
     }

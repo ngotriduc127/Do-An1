@@ -60,8 +60,7 @@ namespace QuanLyDiemSinhVien
         {
             if (trangthaidangnhap >0)
             {
-                btnDangNhapChinh.BackColor = Color.SkyBlue;
-                btnNhapDiem.BackColor = Color.SkyBlue;
+                btnDangNhapChinh.BackColor = Color.SkyBlue;                btnNhapDiem.BackColor = Color.SkyBlue;
                 btnXemDiem.BackColor = Color.Yellow;
                 btnThoat2.BackColor = Color.SkyBlue;
                 btnThongTin.BackColor = Color.SkyBlue;

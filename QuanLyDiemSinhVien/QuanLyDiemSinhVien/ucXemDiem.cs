@@ -47,26 +47,6 @@ namespace QuanLyDiemSinhVien
             Load_Data();
         }
 
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
-        {
-            dgvXemDiemTheoMaSinhVien.DataSource = xd.TimML(txtTimKiem.Text, ref err);
-
-        }
-
-        private void btnTinhDiemTrungBinh_Click(object sender, EventArgs e)
-        {
-
-            int r = dgvXemDiemTheoMaSinhVien.Rows.Count;
-            float TongDTB = 0;
-            for (int i = 0; i < r - 1; i++)
-            {
-                TongDTB += float.Parse(dgvXemDiemTheoMaSinhVien.Rows[i].Cells[9].Value.ToString());
-            }
-            float.Parse(textBox1.Text = TongDTB.ToString());
-            TongTC();
-            float.Parse(textBox3.Text = (Convert.ToString(float.Parse(textBox1.Text) / float.Parse(textBox2.Text)).ToString()));
-        }
-
         private void InExcel(DataGridView dgv, string duongdan, string tentep)
         {
             app obj = new app();
@@ -91,27 +71,8 @@ namespace QuanLyDiemSinhVien
             obj.ActiveWorkbook.Saved = true;
 
         }
-        private void btnIn_Click(object sender, EventArgs e)
-        {
-            InExcel(dgvXemDiemTheoMaSinhVien, @"D:\", "DiemSinhVien");
-            MessageBox.Show("Đã in thành tệp excel trong thư mục D:\"");
-        }
+ 
 
-     
-
-        private void txtTKMSSV_TextChanged_1(object sender, EventArgs e)
-        {
-            dgvXemDiemTheoMaSinhVien.DataSource = xd.TimMSSV(txtTKMSSV.Text, ref err);
-        }
-
-        private void dgvXemDiemTheoMaSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-             //int r = dgvXemDiemTheoMaSinhVien.CurrentRow.Cells[0].RowIndex;
-            
-               // textBox1.Text = Convert.ToString(xd.STC(dgvXemDiemTheoMaSinhVien.Rows[r].Cells[0].Value.ToString(),dgvXemDiemTheoMaSinhVien.Rows[r].Cells[1].Value.ToString(), ref err)); 
-                    
-                // textBox1.Text = dgvXemDiemTheoMaSinhVien.CurrentRow.Cells[9].Value.ToString();
-        }
         public void TongTC()
         {
             int r1 = dgvXemDiemTheoMaSinhVien.Rows.Count;
@@ -121,6 +82,36 @@ namespace QuanLyDiemSinhVien
                 tongTC += int.Parse(xd.STC(dgvXemDiemTheoMaSinhVien.Rows[i].Cells[0].Value.ToString(), dgvXemDiemTheoMaSinhVien.Rows[i].Cells[1].Value.ToString(),ref err));
             }
             float.Parse(textBox2.Text = tongTC.ToString());
+        }
+
+        private void txtTKMSSV_TextChanged(object sender, EventArgs e)
+        {
+            dgvXemDiemTheoMaSinhVien.DataSource = xd.TimMSSV(txtTKMSSV.Text, ref err);
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            InExcel(dgvXemDiemTheoMaSinhVien, @"D:\", "DiemSinhVien");
+            MessageBox.Show("Đã in thành tệp excel trong thư mục D:\"");
+        }
+
+        private void btnTinhDiemTrungBinh_Click(object sender, EventArgs e)
+        {
+
+            int r = dgvXemDiemTheoMaSinhVien.Rows.Count;
+            float TongDTB = 0;
+            for (int i = 0; i < r - 1; i++)
+            {
+                TongDTB += float.Parse(dgvXemDiemTheoMaSinhVien.Rows[i].Cells[9].Value.ToString());
+            }
+            float.Parse(textBox1.Text = TongDTB.ToString());
+            TongTC();
+            float.Parse(textBox3.Text = (Convert.ToString(float.Parse(textBox1.Text) / float.Parse(textBox2.Text)).ToString()));
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            dgvXemDiemTheoMaSinhVien.DataSource = xd.TimML(txtTimKiem.Text, ref err);
         }
     }
 }

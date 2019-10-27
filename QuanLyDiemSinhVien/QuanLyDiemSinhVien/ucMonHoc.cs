@@ -42,14 +42,16 @@ namespace QuanLyDiemSinhVien
         {
             Load_Data();
         }
-    
+
+
+
         private void dgvMonHoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int r = dgvMonHoc.CurrentCell.RowIndex;
             textBox1.Text = dgvMonHoc.Rows[r].Cells[0].Value.ToString();
         }
 
-        private void btnThem_Click_1(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -64,39 +66,55 @@ namespace QuanLyDiemSinhVien
             }
             catch (Exception)
             {
-                MessageBox.Show("lỗi cmnr :((");
+                MessageBox.Show("Thông Báo", "Hình Như Một Thông Tin Nào Đó Đã Nhập Sai", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-        }
-
-        private void btnCapNhat_Click_1(object sender, EventArgs e)
-        {
-            BLLop lop = new BLLop();
-            BLMonHoc MonHoc = new BLMonHoc();
-            int stc = Convert.ToInt32(dgvMonHoc.CurrentRow.Cells[2].Value.ToString());
-            MonHoc.CapNhatMH(dgvMonHoc.CurrentRow.Cells[1].Value.ToString(), stc, dgvMonHoc.CurrentRow.Cells[0].Value.ToString(), textBox1.Text, ref err);
-            lop.CapNhatMonHoc(dgvMonHoc.CurrentRow.Cells[0].Value.ToString(), ref err);
-            Load_Data();
-            lop.LayTT();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            BLLop lop = new BLLop();
-            DialogResult traloi;
-            traloi = MessageBox.Show("Bạn có chắc muốn xóa nhân viên này không?", "Trả lời",
-            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (traloi == DialogResult.Yes)
+            try
             {
-                mh.Xoa(dgvMonHoc.CurrentRow.Cells[0].Value.ToString(), ref err);
-                lop.XoaMH(dgvMonHoc.CurrentRow.Cells[1].Value.ToString(), ref err);
-                // Cập nhật lại DataGridView
-                Load_Data();
-                MessageBox.Show("Đã xóa xong!");
-                lop.LayTT();             
+                BLLop lop = new BLLop();
+                DialogResult traloi;
+                traloi = MessageBox.Show("Bạn có chắc muốn xóa nhân viên này không?", "Trả lời",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (traloi == DialogResult.Yes)
+                {
+                    mh.Xoa(dgvMonHoc.CurrentRow.Cells[0].Value.ToString(), ref err);
+                    lop.XoaMH(dgvMonHoc.CurrentRow.Cells[1].Value.ToString(), ref err);
+                    // Cập nhật lại DataGridView
+                    Load_Data();
+                    MessageBox.Show("Đã xóa xong!");
+                    lop.LayTT();
+                }
+                else
+                {
+                    MessageBox.Show("Không thực hiện việc xóa!");
+                }
+            }catch(Exception)
+            {
+                MessageBox.Show("Thông Báo", "Hmmm.Đã lỗi chổ nào rồi sao?? ,Báo cáo lại với người tạo ra phần mềm giúp mình nhé", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
-            else
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            try
             {
-                MessageBox.Show("Không thực hiện việc xóa!");
+                BLLop lop = new BLLop();
+                BLMonHoc MonHoc = new BLMonHoc();
+                int stc = Convert.ToInt32(dgvMonHoc.CurrentRow.Cells[2].Value.ToString());
+                MonHoc.CapNhatMH(dgvMonHoc.CurrentRow.Cells[1].Value.ToString(), stc, dgvMonHoc.CurrentRow.Cells[0].Value.ToString(), textBox1.Text, ref err);
+                lop.CapNhatMonHoc(dgvMonHoc.CurrentRow.Cells[0].Value.ToString(), ref err);
+                Load_Data();
+                lop.LayTT();
+                MessageBox.Show("Đã sửa xong!");
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Thông Báo", "Bạn Đã Nhập Sai Thông Tin Nào Đó Mời Bạn Nhập Lại", MessageBoxButtons.OK, MessageBoxIcon.Question);
+
             }
         }
     }

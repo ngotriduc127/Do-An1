@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChinh));
             this.pnButton = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDangNhapChinh = new System.Windows.Forms.Button();
             this.btnNhapDiem = new System.Windows.Forms.Button();
             this.btnXemDiem = new System.Windows.Forms.Button();
@@ -46,12 +47,17 @@
             this.entityConnection2 = new System.Data.Entity.Core.EntityClient.EntityConnection();
             this.entityCommand4 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.thongtin = new System.Windows.Forms.Button();
             this.ucXemDiem2 = new QuanLyDiemSinhVien.ucXemDiem();
             this.ucNhapDiem3 = new QuanLyDiemSinhVien.ucNhapDiem();
             this.ucTieuDe2 = new QuanLyDiemSinhVien.ucTieuDe();
             this.ucChinh_DangKy2 = new QuanLyDiemSinhVien.ucChinh_DangKy();
             this.ucChinh2 = new QuanLyDiemSinhVien.ucChinh();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ucGiaoVien1 = new QuanLyDiemSinhVien.ucGiaoVien();
+            this.ucLop1 = new QuanLyDiemSinhVien.ucLop();
+            this.ucMonHoc1 = new QuanLyDiemSinhVien.ucMonHoc();
+            this.ucNganh1 = new QuanLyDiemSinhVien.ucNganh();
+            this.ucSinhVien1 = new QuanLyDiemSinhVien.ucSinhVien();
             this.pnButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,12 +68,26 @@
             this.pnButton.Controls.Add(this.pictureBox1);
             this.pnButton.Controls.Add(this.btnDangNhapChinh);
             this.pnButton.Controls.Add(this.btnNhapDiem);
-            this.pnButton.Controls.Add(this.btnXemDiem);
+            this.pnButton.Controls.Add(this.thongtin);
             this.pnButton.Controls.Add(this.btnThoat2);
+            this.pnButton.Controls.Add(this.btnXemDiem);
             this.pnButton.Location = new System.Drawing.Point(1, 0);
+            this.pnButton.Margin = new System.Windows.Forms.Padding(4);
             this.pnButton.Name = "pnButton";
-            this.pnButton.Size = new System.Drawing.Size(270, 781);
+            this.pnButton.Size = new System.Drawing.Size(360, 961);
             this.pnButton.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::QuanLyDiemSinhVien.Properties.Resources.icontruonghoc;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(349, 222);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // btnDangNhapChinh
             // 
@@ -76,9 +96,10 @@
             this.btnDangNhapChinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangNhapChinh.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhapChinh.ForeColor = System.Drawing.Color.Red;
-            this.btnDangNhapChinh.Location = new System.Drawing.Point(0, 186);
+            this.btnDangNhapChinh.Location = new System.Drawing.Point(0, 229);
+            this.btnDangNhapChinh.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangNhapChinh.Name = "btnDangNhapChinh";
-            this.btnDangNhapChinh.Size = new System.Drawing.Size(265, 103);
+            this.btnDangNhapChinh.Size = new System.Drawing.Size(353, 127);
             this.btnDangNhapChinh.TabIndex = 0;
             this.btnDangNhapChinh.Text = "ĐĂNG NHẬP";
             this.btnDangNhapChinh.UseVisualStyleBackColor = false;
@@ -91,9 +112,10 @@
             this.btnNhapDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhapDiem.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhapDiem.ForeColor = System.Drawing.Color.Red;
-            this.btnNhapDiem.Location = new System.Drawing.Point(3, 295);
+            this.btnNhapDiem.Location = new System.Drawing.Point(4, 345);
+            this.btnNhapDiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnNhapDiem.Name = "btnNhapDiem";
-            this.btnNhapDiem.Size = new System.Drawing.Size(262, 110);
+            this.btnNhapDiem.Size = new System.Drawing.Size(349, 135);
             this.btnNhapDiem.TabIndex = 1;
             this.btnNhapDiem.Text = "NHẬP ĐIỂM";
             this.btnNhapDiem.UseVisualStyleBackColor = false;
@@ -107,9 +129,10 @@
             this.btnXemDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXemDiem.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemDiem.ForeColor = System.Drawing.Color.Red;
-            this.btnXemDiem.Location = new System.Drawing.Point(3, 411);
+            this.btnXemDiem.Location = new System.Drawing.Point(0, 479);
+            this.btnXemDiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnXemDiem.Name = "btnXemDiem";
-            this.btnXemDiem.Size = new System.Drawing.Size(262, 103);
+            this.btnXemDiem.Size = new System.Drawing.Size(349, 127);
             this.btnXemDiem.TabIndex = 2;
             this.btnXemDiem.Text = "XEM ĐIỂM";
             this.btnXemDiem.UseVisualStyleBackColor = false;
@@ -123,9 +146,10 @@
             this.btnThoat2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat2.ForeColor = System.Drawing.Color.Red;
-            this.btnThoat2.Location = new System.Drawing.Point(0, 520);
+            this.btnThoat2.Location = new System.Drawing.Point(4, 729);
+            this.btnThoat2.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat2.Name = "btnThoat2";
-            this.btnThoat2.Size = new System.Drawing.Size(262, 98);
+            this.btnThoat2.Size = new System.Drawing.Size(349, 121);
             this.btnThoat2.TabIndex = 6;
             this.btnThoat2.Text = "THOÁT";
             this.btnThoat2.UseVisualStyleBackColor = false;
@@ -138,9 +162,10 @@
             this.btnThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThongTin.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongTin.ForeColor = System.Drawing.Color.Red;
-            this.btnThongTin.Location = new System.Drawing.Point(432, 873);
+            this.btnThongTin.Location = new System.Drawing.Point(576, 1074);
+            this.btnThongTin.Margin = new System.Windows.Forms.Padding(4);
             this.btnThongTin.Name = "btnThongTin";
-            this.btnThongTin.Size = new System.Drawing.Size(205, 103);
+            this.btnThongTin.Size = new System.Drawing.Size(273, 127);
             this.btnThongTin.TabIndex = 4;
             this.btnThongTin.Text = "THÔNG TIN";
             this.btnThongTin.UseVisualStyleBackColor = false;
@@ -150,8 +175,9 @@
             // btnThoat
             // 
             this.btnThoat.Location = new System.Drawing.Point(0, 0);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.Size = new System.Drawing.Size(100, 28);
             this.btnThoat.TabIndex = 5;
             // 
             // timerDangNhapDangXuat
@@ -196,36 +222,52 @@
             this.entityCommand4.EnablePlanCaching = true;
             this.entityCommand4.Transaction = null;
             // 
+            // thongtin
+            // 
+            this.thongtin.BackColor = System.Drawing.Color.SkyBlue;
+            this.thongtin.FlatAppearance.BorderColor = System.Drawing.Color.SkyBlue;
+            this.thongtin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.thongtin.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thongtin.ForeColor = System.Drawing.Color.Red;
+            this.thongtin.Location = new System.Drawing.Point(4, 614);
+            this.thongtin.Margin = new System.Windows.Forms.Padding(4);
+            this.thongtin.Name = "thongtin";
+            this.thongtin.Size = new System.Drawing.Size(349, 121);
+            this.thongtin.TabIndex = 6;
+            this.thongtin.Text = "THÔNG TIN";
+            this.thongtin.UseVisualStyleBackColor = false;
+            this.thongtin.Click += new System.EventHandler(this.btnThongTin_Click);
+            // 
             // ucXemDiem2
             // 
-            this.ucXemDiem2.BackColor = System.Drawing.Color.Transparent;
-            this.ucXemDiem2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucXemDiem2.BackgroundImage")));
+            this.ucXemDiem2.BackColor = System.Drawing.Color.DarkGray;
             this.ucXemDiem2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucXemDiem2.Location = new System.Drawing.Point(266, 0);
+            this.ucXemDiem2.Location = new System.Drawing.Point(359, 0);
             this.ucXemDiem2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ucXemDiem2.Name = "ucXemDiem2";
-            this.ucXemDiem2.Size = new System.Drawing.Size(1202, 709);
-            this.ucXemDiem2.TabIndex = 10;
+            this.ucXemDiem2.Size = new System.Drawing.Size(1624, 1053);
+            this.ucXemDiem2.TabIndex = 12;
             // 
             // ucNhapDiem3
             // 
             this.ucNhapDiem3.BackColor = System.Drawing.Color.Aqua;
             this.ucNhapDiem3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucNhapDiem3.BackgroundImage")));
             this.ucNhapDiem3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucNhapDiem3.Location = new System.Drawing.Point(266, 3);
+            this.ucNhapDiem3.Location = new System.Drawing.Point(355, 4);
+            this.ucNhapDiem3.Margin = new System.Windows.Forms.Padding(5);
             this.ucNhapDiem3.Name = "ucNhapDiem3";
-            this.ucNhapDiem3.Size = new System.Drawing.Size(1335, 860);
+            this.ucNhapDiem3.Size = new System.Drawing.Size(1780, 1058);
             this.ucNhapDiem3.TabIndex = 9;
             // 
             // ucTieuDe2
             // 
-            this.ucTieuDe2.BackColor = System.Drawing.Color.Transparent;
-            this.ucTieuDe2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTieuDe2.BackgroundImage")));
+            this.ucTieuDe2.BackColor = System.Drawing.Color.Black;
             this.ucTieuDe2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucTieuDe2.Location = new System.Drawing.Point(266, 0);
+            this.ucTieuDe2.Location = new System.Drawing.Point(358, 0);
+            this.ucTieuDe2.Margin = new System.Windows.Forms.Padding(4);
             this.ucTieuDe2.Name = "ucTieuDe2";
-            this.ucTieuDe2.Size = new System.Drawing.Size(1082, 700);
-            this.ucTieuDe2.TabIndex = 8;
+            this.ucTieuDe2.Size = new System.Drawing.Size(1624, 1053);
+            this.ucTieuDe2.TabIndex = 11;
             // 
             // ucChinh_DangKy2
             // 
@@ -234,9 +276,10 @@
             this.ucChinh_DangKy2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucChinh_DangKy2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ucChinh_DangKy2.ForeColor = System.Drawing.Color.Black;
-            this.ucChinh_DangKy2.Location = new System.Drawing.Point(266, 0);
+            this.ucChinh_DangKy2.Location = new System.Drawing.Point(355, 0);
+            this.ucChinh_DangKy2.Margin = new System.Windows.Forms.Padding(5);
             this.ucChinh_DangKy2.Name = "ucChinh_DangKy2";
-            this.ucChinh_DangKy2.Size = new System.Drawing.Size(1219, 856);
+            this.ucChinh_DangKy2.Size = new System.Drawing.Size(1624, 1053);
             this.ucChinh_DangKy2.TabIndex = 7;
             // 
             // ucChinh2
@@ -246,36 +289,78 @@
             this.ucChinh2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucChinh2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ucChinh2.ForeColor = System.Drawing.Color.Red;
-            this.ucChinh2.Location = new System.Drawing.Point(266, 6);
+            this.ucChinh2.Location = new System.Drawing.Point(355, 7);
+            this.ucChinh2.Margin = new System.Windows.Forms.Padding(5);
             this.ucChinh2.Name = "ucChinh2";
-            this.ucChinh2.Size = new System.Drawing.Size(1120, 694);
+            this.ucChinh2.Size = new System.Drawing.Size(1493, 854);
             this.ucChinh2.TabIndex = 6;
             // 
-            // pictureBox1
+            // ucGiaoVien1
             // 
-            this.pictureBox1.BackgroundImage = global::QuanLyDiemSinhVien.Properties.Resources.icontruonghoc;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(262, 180);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.ucGiaoVien1.BackColor = System.Drawing.Color.Transparent;
+            this.ucGiaoVien1.Location = new System.Drawing.Point(355, 0);
+            this.ucGiaoVien1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucGiaoVien1.Name = "ucGiaoVien1";
+            this.ucGiaoVien1.Size = new System.Drawing.Size(1624, 1053);
+            this.ucGiaoVien1.TabIndex = 13;
+            // 
+            // ucLop1
+            // 
+            this.ucLop1.BackColor = System.Drawing.Color.Transparent;
+            this.ucLop1.Location = new System.Drawing.Point(355, 0);
+            this.ucLop1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucLop1.Name = "ucLop1";
+            this.ucLop1.Size = new System.Drawing.Size(1624, 1053);
+            this.ucLop1.TabIndex = 14;
+            // 
+            // ucMonHoc1
+            // 
+            this.ucMonHoc1.BackColor = System.Drawing.Color.Transparent;
+            this.ucMonHoc1.Location = new System.Drawing.Point(355, 0);
+            this.ucMonHoc1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucMonHoc1.Name = "ucMonHoc1";
+            this.ucMonHoc1.Size = new System.Drawing.Size(1624, 1053);
+            this.ucMonHoc1.TabIndex = 15;
+            // 
+            // ucNganh1
+            // 
+            this.ucNganh1.BackColor = System.Drawing.Color.Transparent;
+            this.ucNganh1.Location = new System.Drawing.Point(355, 0);
+            this.ucNganh1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucNganh1.Name = "ucNganh1";
+            this.ucNganh1.Size = new System.Drawing.Size(1624, 1053);
+            this.ucNganh1.TabIndex = 16;
+            // 
+            // ucSinhVien1
+            // 
+            this.ucSinhVien1.BackColor = System.Drawing.Color.Transparent;
+            this.ucSinhVien1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ucSinhVien1.Location = new System.Drawing.Point(355, 0);
+            this.ucSinhVien1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucSinhVien1.Name = "ucSinhVien1";
+            this.ucSinhVien1.Size = new System.Drawing.Size(1624, 1053);
+            this.ucSinhVien1.TabIndex = 17;
             // 
             // frmChinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1344, 701);
+            this.ClientSize = new System.Drawing.Size(1792, 863);
+            this.Controls.Add(this.ucSinhVien1);
+            this.Controls.Add(this.ucNganh1);
+            this.Controls.Add(this.ucMonHoc1);
+            this.Controls.Add(this.ucLop1);
+            this.Controls.Add(this.ucGiaoVien1);
+            this.Controls.Add(this.ucXemDiem2);
             this.Controls.Add(this.pnButton);
             this.Controls.Add(this.btnThongTin);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.ucChinh_DangKy2);
-            this.Controls.Add(this.ucChinh2);
-            this.Controls.Add(this.ucXemDiem2);
             this.Controls.Add(this.ucNhapDiem3);
             this.Controls.Add(this.ucTieuDe2);
+            this.Controls.Add(this.ucChinh_DangKy2);
+            this.Controls.Add(this.ucChinh2);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -312,11 +397,17 @@
         private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand4;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         public System.Windows.Forms.Button btnThoat2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Button thongtin;
+        private ucNhapDiem ucNhapDiem3;
+        private ucXemDiem ucXemDiem2;
         private ucChinh ucChinh2;
         private ucChinh_DangKy ucChinh_DangKy2;
         private ucTieuDe ucTieuDe2;
-        private ucNhapDiem ucNhapDiem3;
-        private ucXemDiem ucXemDiem2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private ucGiaoVien ucGiaoVien1;
+        private ucLop ucLop1;
+        private ucMonHoc ucMonHoc1;
+        private ucNganh ucNganh1;
+        private ucSinhVien ucSinhVien1;
     }
 }
